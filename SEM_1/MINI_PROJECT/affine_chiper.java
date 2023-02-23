@@ -1,4 +1,4 @@
-package PROJECT;
+package MINI_PROJECT;
 import java.util.*;
 public class affine_chiper {
     public static void main(String[] args) {
