@@ -12,7 +12,7 @@ public class p5 {
         System.out.print("Enter the side : ");
         double s = sc.nextDouble();
 
-        System.out.println(area(n, s));
+        System.out.println("The area is " + area(n, s));
         sc.close();
     }
 }
