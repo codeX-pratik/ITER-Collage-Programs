@@ -25,6 +25,8 @@ public class p1 {
 }
 
 /*
+output : 
+
 Enter the size of the array : 5
 The sum is 21.0
 The Average is 4.2 
