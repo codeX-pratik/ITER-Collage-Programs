@@ -24,6 +24,7 @@ public class p10 {
         int choice = sc.nextInt();
 
         p10 obj = new p10();
+
         switch(choice) {
             case 1 : 
                 System.out.print("Enter the base : ");
