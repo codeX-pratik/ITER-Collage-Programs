@@ -26,3 +26,14 @@ public class reversal_Array {
         sc.close();
     }
 }
+
+/*
+Enter the size of the Array : 5
+Enter 1 Element of Array : 9
+Enter 2 Element of Array : 5
+Enter 3 Element of Array : 7
+Enter 4 Element of Array : 2
+Enter 5 Element of Array : 6
+The Original Array is [9, 5, 7, 2, 6]
+The reversed Array is [6, 2, 7, 5, 9]
+*/
