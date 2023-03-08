@@ -26,7 +26,6 @@ public class reversal_Array {
         sc.close();
     }
 }
-
 /*
 Enter the size of the Array : 5
 Enter 1 Element of Array : 9
