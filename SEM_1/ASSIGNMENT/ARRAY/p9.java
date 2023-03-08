@@ -1,7 +1,11 @@
 /*
+
 Write a method to find the element present in the Array using Linear Search. The method header is given below.
 public static int Lsearch(int[] array, item)
-The method will return the index of the item if the element is present in the array. Otherwise it will return -1. Write a java program that prompts the user to enter 5 numbers, and the item to search, then invokes this method to display whether the element is present in the array. Here is a sample run of the program:
+The method will return the index of the item if the element is present in the array. Otherwise it will return -1. 
+Write a java program that prompts the user to enter 5 numbers, and the item to search, then invokes 
+this method to display whether the element is present in the array. Here is a sample run of the program:
+
  */
 
 package ARRAY;
