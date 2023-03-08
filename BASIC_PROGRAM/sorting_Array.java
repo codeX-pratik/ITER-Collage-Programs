@@ -11,6 +11,7 @@ public class sorting_Array {
             System.out.print("Enter " + (i+1) + " Element of Array : ");
             sorting_Array[i] = sc.nextInt();
         }
+        System.out.println("The Original Array is " + Arrays.toString(sorting_Array));
         for (int i=0 ; i<sorting_Array.length ; i++) {
             for (int j=0 ; j<sorting_Array.length ; j++) {
                 if (sorting_Array[j] < sorting_Array[i]) {
@@ -32,5 +33,6 @@ Enter 2 Element of Array : 5
 Enter 3 Element of Array : 7
 Enter 4 Element of Array : 2
 Enter 5 Element of Array : 6
+The Original Array is [9, 5, 7, 2, 6]
 The sorted Array is [9, 7, 6, 5, 2]
 */
