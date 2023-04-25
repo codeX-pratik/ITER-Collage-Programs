@@ -22,8 +22,7 @@ class Person implements DetailInfo{
 public class p8 {
     public static void main(String[] args) {
         Person p = new Person();
-        p.name = "pratik";
-        p.name = "abcdefghigh";
+        p.name = "javaprogram";
         p.display();
         System.out.println("The length of the Name is " + (p.count()));
         System.out.println(Person.maxcount);
