@@ -54,7 +54,8 @@ public class p9 {
 
         for (int i=0 ; i<n ; i++) {
             System.out.println("Detail and Marks of the Student " + (i+1) + " : ");
-            
+            arr[i].display_Student();
+            arr[i].display_result();
         }
         sc.close();
         
