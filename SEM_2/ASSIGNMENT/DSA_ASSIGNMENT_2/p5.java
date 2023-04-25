@@ -5,24 +5,24 @@ class Deposit {
     int time;
     double rate;
     double total_amt;
-    public Deposit() {
+    Deposit() {
         principle = 0;
         time = 0;
         rate = 0;
     }
-    public Deposit (long p , int t , double r) {
+    Deposit (long p , int t , double r) {
         principle = p;
         time = t;
         rate = r;
         calc_amt();
     }
-    public Deposit (long p , int t) {
+    Deposit (long p , int t) {
         principle = p;
         time = t;
         rate = 0.0;
         calc_amt();
     }
-    public Deposit (long p , double r) {
+    Deposit (long p , double r) {
         principle = p;
         time = 1;
         rate = r;

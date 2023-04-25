@@ -1,77 +1,82 @@
 package DSA_ASSIGNMENT_2;
 import java.util.*;
 abstract class Shape {
-    abstract double calculate_area();
+    abstract void area();
+    double area;
+    String shape;
+    void display() {
+        System.out.println("The Area of the " + shape + " is " + area);
+    }
 }
 class Square extends Shape {
     double side;
-    Square (double s) {
-        side = s;
+    Square(double s) {
+        this.side = s;
     }
-    @Override
-    double calculate_area() {
-        return (side * side);
+    void area() {
+        shape = "square";
+        area = side * side;
     }
 }
-class Circle extends Shape {
+class Circle  extends Shape {
     double radius;
-    Circle (double r) {
-        radius = r;
+    Circle(double r) {
+        this.radius = r;
     }
-    @Override
-    double calculate_area() {
-        return (Math.PI * Math.pow(radius,2));
+    void area() {
+        shape = "Circle";
+        area = Math.PI * Math.pow(radius, 2);
     }
 }
 class Triangle extends Shape {
     double base , height;
-    Triangle (double b , double h) {
-        base = b;
-        height = h;
+    Triangle(double b , double h) {
+        this.base = b;
+        this.height = h;
     }
-    @Override
-    double calculate_area() {
-        return (0.5 * base * height);
+    void area() {
+        shape = "Triangle";
+        area = 0.5 * base * height;
     }
 }
+
 public class p6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("----> Choose a Shape <----");
-        System.out.println("1. Square \n2. Triangle \n3. Circle");
+
+        System.out.println("----> Shape <----");
+        System.out.println("1. Square \n2. Circle \n3. Triangle");
         System.out.print("Enter your Choice : ");
         int Choice = sc.nextInt();
 
-        
         switch(Choice) {
-            case 1 :
+            case 1 : 
                 System.out.print("Enter the side of the Square : ");
-                double s1 = sc.nextDouble();
-                Square s = new Square(s1);
-                System.out.print("The area of the Square is ");
-                s.calculate_area();
+                double s = sc.nextDouble();
+                Square obj_s = new Square(s);
+                obj_s.area();
+                obj_s.display();
             break;
             case 2 :
-                System.out.print("Enter the radius of the Circle : ");
-                double r1 = sc.nextDouble();
-                Circle c = new Circle(r1);
-                System.out.print("The area of the Circle is ");
-                c.calculate_area();
+                System.out.print("Enter the radius of the Cirlce : ");
+                double r = sc.nextDouble();
+                Circle obj_c = new Circle(r);
+                obj_c.area();
+                obj_c.display();
             break;
-            case 3 :
+            case 3 : 
                 System.out.print("Enter the base of the Triangle : ");
                 double b = sc.nextDouble();
-                System.out.println("Enter the height of the Triangle : ");
+                System.out.print("Enter the height of the Triangle : ");
                 double h = sc.nextDouble();
-                Triangle t = new Triangle(b, h);
-                System.out.print("The area of the Trianle is ");
-                t.calculate_area();
+                Triangle obj_t = new Triangle(b, h);
+                obj_t.area();
+                obj_t.display();
             break;
-            default : 
+            default :
                 System.out.println("Invalid Choice !!");
             break;
         }
-        
         sc.close();
     }
 }
