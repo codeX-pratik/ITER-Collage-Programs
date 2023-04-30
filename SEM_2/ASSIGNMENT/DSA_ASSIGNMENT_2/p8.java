@@ -1,31 +1,27 @@
-package DSA_ASSIGNMENT_2;
-
 interface DetailInfo {
-    void display();
-    int count();
+    public void display();
+    public int  count();
 }
-class Person implements DetailInfo{
+class Person_p8 implements DetailInfo{
     static int maxcount = 0;
     String name;
     public void display() {
         System.out.println("The name of the person is " + name);
     }
-    public int count() {
-        int count = name.length();
-        if (count > maxcount) {
-            maxcount = count;
+    public int count()  {
+        int length = name.length();
+        if (length > maxcount) {
+            maxcount = length;
         }
-        return count;
-        
+        return length;
     }
 }
 public class p8 {
     public static void main(String[] args) {
-        Person p = new Person();
-        p.name = "javaprogram";
-        p.display();
-        System.out.println("The length of the Name is " + (p.count()));
-        System.out.println(Person.maxcount);
+        Person_p8 per = new Person_p8();
+        per.name = "pratik";
+        per.display();
+        System.out.println("The length of the Character is " + per.count());
+        System.out.println("MAX COUNT : " + Person_p8.maxcount);
     }
 }
-

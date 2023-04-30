@@ -1,6 +1,4 @@
-package DSA_ASSIGNMENT_2;
-import java.util.*;
-
+import java.util.Scanner;
 class Phone {
     int area_code , exchange , number;
     void input() {
@@ -21,8 +19,18 @@ class Phone {
 public class p1 {
     public static void main(String[] args) {
         Phone obj1 = new Phone();
-        obj1.input();
-        System.out.print("My Number is ");
+        Phone obj2 = new Phone();
+
+        obj1.area_code = 222;
+        obj1.exchange = 212;
+        obj1.exchange = 767;
+        obj1.number = 8900;
+        System.out.print("My number is ");
         obj1.display();
+
+
+        obj2.input();
+        System.out.print("Your Number is ");
+        obj2.display();
     }
 }

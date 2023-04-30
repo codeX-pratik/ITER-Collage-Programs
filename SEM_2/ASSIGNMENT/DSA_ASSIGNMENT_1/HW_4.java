@@ -1,4 +1,3 @@
-package DSA_ASSIGNMENT_1;
 import java.util.*;
 public class HW_4 {
     public static double[][] addMatrix(double [][]a , double[][]b) {

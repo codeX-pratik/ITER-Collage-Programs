@@ -1,5 +1,3 @@
-package DSA_ASSIGNMENT_1;
-
 public class p4 {
     public static void printpermutation(StringBuffer s) {
         int k = 0 ,l = 0;

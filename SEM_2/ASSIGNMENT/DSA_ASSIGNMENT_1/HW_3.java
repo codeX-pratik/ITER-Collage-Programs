@@ -1,4 +1,3 @@
-package DSA_ASSIGNMENT_1;
 import java.util.*;
 public class HW_3 {
     public static void main(String[] args) {

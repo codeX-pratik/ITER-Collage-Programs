@@ -1,4 +1,3 @@
-package DSA_ASSIGNMENT_1;
 public class HW_5 {
     public static void main(String[] args) {
         int [][]arr = new int[4][4];

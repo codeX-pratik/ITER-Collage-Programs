@@ -1,10 +1,3 @@
-/*
-Write a Java program that can take a positive integer greater than 2 as input and
- write out the number of times one must repeatedly divide this number by 2 before
-getting a value less than 2.
- */
-
-package DSA_ASSIGNMENT_1;
 public class p1 {
     public static void main(String[] args) {
         
@@ -16,11 +9,6 @@ public class p1 {
             }
             n = n / 2;
         }
-        System.out.println(c);
+        System.out.println("The number of times one must repeatedly divide this number by 2 before getting a value less than 2 is " + c);
     }
 }
-/*
-output : 
-
-6
- */

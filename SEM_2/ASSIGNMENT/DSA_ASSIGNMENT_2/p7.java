@@ -1,4 +1,3 @@
-package DSA_ASSIGNMENT_2;
 import java.util.*;
 class Person {
     String name;
@@ -17,7 +16,7 @@ class Employee extends Person {
         this.Eid = Eid;
         this.salary = salary;
     }
-    void display() {
+    void empdisplay() {
         System.out.println("Name : " + name);
         System.out.println("Age : " + age);
         System.out.println("Employee ID : " + Eid);
@@ -30,7 +29,7 @@ public class p7 {
         Scanner sc = new Scanner(System.in);
 
         Employee emp1 = new Employee("Java_User", 19, 1234, 50000);
-        emp1.display();
+        emp1.empdisplay();
 
         sc.close();
     }

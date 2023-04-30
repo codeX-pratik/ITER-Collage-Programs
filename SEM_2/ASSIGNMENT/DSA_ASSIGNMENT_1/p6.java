@@ -1,4 +1,3 @@
-package DSA_ASSIGNMENT_1;
 import java.util.*;
 public class p6 {
     public static boolean isOdd(int n) {

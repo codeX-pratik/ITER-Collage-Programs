@@ -1,4 +1,3 @@
-package DSA_ASSIGNMENT_1;
 import java.util.*;
 public class p9 {
     public static double sumMajorDiagonal(double [][]m) {

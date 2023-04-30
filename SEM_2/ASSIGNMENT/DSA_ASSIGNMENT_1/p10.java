@@ -1,4 +1,3 @@
-package DSA_ASSIGNMENT_1;
 import java.util.*;
 public class p10 {
     public static double sumColumn(double[][]m , int columnIndex) {

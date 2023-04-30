@@ -1,6 +1,4 @@
-package DSA_ASSIGNMENT_2;
 import java.util.*;
-
 class Student {
     int roll_no;
     String name;

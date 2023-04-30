@@ -1,4 +1,3 @@
-package DSA_ASSIGNMENT_2;
 import java.util.Scanner;
 class Complex {
     double real , imag;
@@ -7,9 +6,9 @@ class Complex {
         this.imag = imag;
     }
     void display () {
-        System.out.printf("%.2f + %.2fi\n",this.real, this.imag);
+        System.out.println(real + imag + "i");
     }
-    public static Complex add(Complex c1, Complex c2) {
+    public Complex add(Complex c1, Complex c2) {
         Complex result = new Complex();
         result.real = c1.real + c2.real;
         result.imag = c1.imag + c2.imag;
@@ -36,8 +35,9 @@ public class p2 {
         System.out.print("c2 = ");
         c2.display();
 
-        Complex sum = Complex.add(c1,c2);
-        System.out.print("sum = ");
+        Complex sum = new Complex();
+        sum = sum.add(c1, c2);
+        System.out.print("The sum of Two Complex Number is ");
         sum.display();
 
         sc.close();

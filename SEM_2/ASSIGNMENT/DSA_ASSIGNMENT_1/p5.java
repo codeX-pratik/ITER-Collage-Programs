@@ -1,4 +1,3 @@
-package DSA_ASSIGNMENT_1;
 import java.util.Scanner;
 public class p5 {
     public static int sum_of_Digits(int n) {

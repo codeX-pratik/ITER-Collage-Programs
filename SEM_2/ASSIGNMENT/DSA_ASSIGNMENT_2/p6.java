@@ -1,4 +1,3 @@
-package DSA_ASSIGNMENT_2;
 import java.util.*;
 abstract class Shape {
     abstract void area();
