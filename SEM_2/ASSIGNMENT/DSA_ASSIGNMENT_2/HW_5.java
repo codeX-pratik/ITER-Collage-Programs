@@ -1,57 +1,19 @@
 interface RestaurantMeal {
-    String getName();
-    double getPrice();
+    String foodName = "steak dinner";
+    double foodPrice = 600;
 }
 
 interface HotelService {
-    String getServiceName();
-    double getServiceFee();
-    int getRoomNumber();
+    String serviceName = "room service";
+    double serviceFee = 24;
+    int roomNumber = 1202;
 }
 
 class RoomServiceMeal implements RestaurantMeal, HotelService {
-    private String name;
-    private double price;
-    private String serviceName;
-    private double serviceFee;
-    private int roomNumber;
-    
-    public RoomServiceMeal() {
-        this.name = "steak dinner";
-        this.price = 600;
-        this.serviceName = "room service";
-        this.serviceFee = 24;
-        this.roomNumber = 1202;
-    }
-    
-    @Override
-    public String getName() {
-        return name;
-    }
-    
-    @Override
-    public double getPrice() {
-        return price;
-    }
-    
-    @Override
-    public String getServiceName() {
-        return serviceName;
-    }
-    
-    @Override
-    public double getServiceFee() {
-        return serviceFee;
-    }
-    
-    @Override
-    public int getRoomNumber() {
-        return roomNumber;
-    }
-    
-    public void display() {
-        double totalFee = price + serviceFee;
-        System.out.println("The Total fee is " + totalFee);
+    void display() {
+        System.out.println("A " + foodName + " costing Rs. " + foodPrice + " is a " + serviceName + " provided to room " + roomNumber + " for Rs. " + serviceFee);
+        double totalFee = foodPrice + serviceFee;
+        System.out.println("The Total fee to pay is Rs. " + totalFee);
     }
 }
 
