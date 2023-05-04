@@ -11,7 +11,7 @@ interface HotelService {
 
 class RoomServiceMeal implements RestaurantMeal, HotelService {
     void display() {
-        System.out.println("A " + foodName + " costing Rs. " + foodPrice + " is a " + serviceName + " provided to room " + roomNumber + " for Rs. " + serviceFee);
+        System.out.println("A \"" + foodName + "\" costing Rs. " + foodPrice + " is a \"" + serviceName + "\" provided to room " + roomNumber + " for Rs. " + serviceFee);
         double totalFee = foodPrice + serviceFee;
         System.out.println("The Total fee to pay is Rs. " + totalFee);
     }
