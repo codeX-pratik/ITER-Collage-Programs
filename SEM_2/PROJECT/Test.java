@@ -4,7 +4,7 @@ public class Test {
     //Creatint Employee Datebase for Getting Data
     public static Employee[] employeeDatebase(int n , Scanner sc) {
         Employee []employeeDatebase = new Employee[n];
-        for (int i=0 ; i<n ; i++) {
+        for (int i=0 ; i<n ; i++) { 
             System.out.println("--------> EMPLOYEE " + (i+1) + " : ");
             //Name
             sc.nextLine();
@@ -197,5 +197,171 @@ employeeDatebase[9] = new Employee("java user_10", 2010, 10000, new Date(20, 5, 
         }
 
         System.out.println("----> Sorting Done <----");
+
+
+
+
+        
+
+
+
+        OUTPUT
+
+Enter the Number of Employees : 10
+
+----> Employee Database Creation Started :
+|
+v
+employeeDatebase[0] = new Employee("java user_1", 2001, 1000, new Date(10, 5 ,2023), "manager", "+91123456", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[1] = new Employee("java user_2", 2002, 2000, new Date(11, 5, 2023), "Software_Developer", "+91987456", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[2] = new Employee("java user_3", 2003, 3000, new Date(13, 5, 2023), "Graphic_Designer", "+85258963", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[3] = new Employee("java user_4", 2004, 804000, new Date(14, 5, 2023), "manager", "+652789654", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[4] = new Employee("java user_5", 2005, 5000, new Date(15, 5, 2023), "Software_Developer", "+91789654", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[5] = new Employee("java user_6", 2006, 6000, new Date(16, 5, 2023), "manager", "+85941256", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[6] = new Employee("java user_7", 2007, 7000, new Date(17, 5, 2023), "Data_Scientist", "+78951236", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[7] = new Employee("java user_8", 2008, 8000, new Date(18, 5, 2023), "Software_Developer", "+32456987", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[8] = new Employee("java user_9", 2009, 9000, new Date(19, 5, 2023), "manager", "+91852456", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[9] = new Employee("java user_10", 2010, 10000, new Date(20, 5, 2023), "Cyber_Security", "+91456852", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+
+|
+v
+----> Sorting the Employee Database According to Salary in Decreasing Order :
+----> Sorting is Done <----
+
+----> For Displaying the Detail of Employee (of the Entered Job Position ) :
+|
+v
+Enter Job Position : manager
+-------->  Employee Detail <-------- :
+Name : java user_4
+Employee Id : 2004
+Salary : 804000.0
+Hire Date : 14-5-2023
+Job Position : manager
+Contact Number : +652789654
+Address : jagamara , Bhubaneswar , Odisha , 751089
+-------->  Employee Detail <-------- :
+Name : java user_9
+Employee Id : 2009
+Salary : 9000.0
+Hire Date : 19-5-2023
+Job Position : manager
+Contact Number : +91852456
+Address : jagamara , Bhubaneswar , Odisha , 751089
+-------->  Employee Detail <-------- :
+Name : java user_6
+Employee Id : 2006
+Salary : 6000.0
+Hire Date : 16-5-2023
+Job Position : manager
+Contact Number : +85941256
+Address : jagamara , Bhubaneswar , Odisha , 751089
+-------->  Employee Detail <-------- :
+Name : java user_1
+Employee Id : 2001
+Salary : 1000.0
+Hire Date : 10-5-2023
+Job Position : manager
+Contact Number : +91123456
+Address : jagamara , Bhubaneswar , Odisha , 751089
+
+
+----> For Displaying the Detail of the Employee Between the Following Dates :
+|
+v
+Enter starting Hire Date : 13 5 2023
+Enter Ending Hire Date : 18 5 2023
+|
+v
+-------->  Employee Detail <-------- :
+Name : java user_4
+Employee Id : 2004
+Salary : 804000.0
+Hire Date : 14-5-2023
+Job Position : manager
+Contact Number : +652789654
+Address : jagamara , Bhubaneswar , Odisha , 751089
+-------->  Employee Detail <-------- :
+Name : java user_8
+Employee Id : 2008
+Salary : 8000.0
+Hire Date : 18-5-2023
+Job Position : Software_Developer
+Contact Number : +32456987
+Address : jagamara , Bhubaneswar , Odisha , 751089
+-------->  Employee Detail <-------- :
+Name : java user_7
+Employee Id : 2007
+Salary : 7000.0
+Hire Date : 17-5-2023
+Job Position : Data_Scientist
+Contact Number : +78951236
+Address : jagamara , Bhubaneswar , Odisha , 751089
+-------->  Employee Detail <-------- :
+Name : java user_6
+Employee Id : 2006
+Salary : 6000.0
+Hire Date : 16-5-2023
+Job Position : manager
+Contact Number : +85941256
+Address : jagamara , Bhubaneswar , Odisha , 751089
+-------->  Employee Detail <-------- : 
+Name : java user_5
+Employee Id : 2005
+Salary : 5000.0
+Hire Date : 15-5-2023
+Job Position : Software_Developer
+Contact Number : +91789654
+Address : jagamara , Bhubaneswar , Odisha , 751089
+-------->  Employee Detail <-------- : 
+Name : java user_3
+Employee Id : 2003
+Salary : 3000.0
+Hire Date : 13-5-2023
+Job Position : Graphic_Designer
+Contact Number : +85258963
+Address : jagamara , Bhubaneswar , Odisha , 751089
+
+----> Display the Foreign Employees :
+The Number of Foreign Employees are : 5
+
+----> Displaying the Employee Detail between the range of the following Salary :
+|
+v
+Enter the salary value of S1 : 3000
+Enter the salary value of s2 : 7000
+-------->  Employee Detail <-------- :
+Name : java user_7
+Employee Id : 2007
+Salary : 7000.0
+Hire Date : 17-5-2023
+Job Position : Data_Scientist
+Contact Number : +78951236
+Address : jagamara , Bhubaneswar , Odisha , 751089
+-------->  Employee Detail <-------- :
+Name : java user_6
+Employee Id : 2006
+Salary : 6000.0
+Hire Date : 16-5-2023
+Job Position : manager
+Contact Number : +85941256
+Address : jagamara , Bhubaneswar , Odisha , 751089
+-------->  Employee Detail <-------- :
+Name : java user_5
+Employee Id : 2005
+Salary : 5000.0
+Hire Date : 15-5-2023
+Job Position : Software_Developer
+Contact Number : +91789654
+Address : jagamara , Bhubaneswar , Odisha , 751089
+-------->  Employee Detail <-------- : 
+Name : java user_3
+Employee Id : 2003
+Salary : 3000.0
+Hire Date : 13-5-2023
+Job Position : Graphic_Designer
+Contact Number : +85258963
+Address : jagamara , Bhubaneswar , Odisha , 751089
+
 
  */
