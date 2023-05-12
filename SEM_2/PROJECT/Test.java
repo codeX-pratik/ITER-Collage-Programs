@@ -56,7 +56,6 @@ public class Test {
                     e[i] = e[j];
                     e[j] = temp;
                 }
-
             }
         }
     }
@@ -166,3 +165,37 @@ public class Test {
         getEmployeesBySalary(e, s1, s2);
     }
 }
+
+/*
+----> Data for Testing purpose
+employeeDatebase[0] = new Employee("java user_1", 2001, 1000, new Date(10, 5 ,2023), "manager", "+91123456", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[1] = new Employee("java user_2", 2002, 2000, new Date(11, 5, 2023), "Software_Developer", "+91987456", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[2] = new Employee("java user_3", 2003, 3000, new Date(13, 5, 2023), "Graphic_Designer", "+85258963", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[3] = new Employee("java user_4", 2004, 804000, new Date(14, 5, 2023), "manager", "+652789654", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[4] = new Employee("java user_5", 2005, 5000, new Date(15, 5, 2023), "Software_Developer", "+91789654", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[5] = new Employee("java user_6", 2006, 6000, new Date(16, 5, 2023), "manager", "+85941256", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[6] = new Employee("java user_7", 2007, 7000, new Date(17, 5, 2023), "Data_Scientist", "+78951236", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[7] = new Employee("java user_8", 2008, 8000, new Date(18, 5, 2023), "Software_Developer", "+32456987", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[8] = new Employee("java user_9", 2009, 9000, new Date(19, 5, 2023), "manager", "+91852456", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[9] = new Employee("java user_10", 2010, 10000, new Date(20, 5, 2023), "Cyber_Security", "+91456852", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+           
+----->For Salary Testing
+
+        for (int i=0 ; i<n ; i++) {
+            System.out.println("------------> Employee " + (i+1) + " : ");
+            System.out.println(e[i].getEmployee());
+        }
+
+        System.out.println("---->intput Done <----");
+
+        arrangeEmployeeBySalary(e);
+
+
+        for (int i=0 ; i<n ; i++) {
+            System.out.println("------------------------------------------------------> Employee " + (i+1) + " : ");
+            System.out.println(e[i].getEmployee());
+        }
+
+        System.out.println("----> Sorting Done <----");
+
+ */
