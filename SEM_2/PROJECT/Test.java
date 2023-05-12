@@ -5,6 +5,7 @@ public class Test {
     public static Employee[] employeeDatebase(int n , Scanner sc) {
         Employee []employeeDatebase = new Employee[n];
         for (int i=0 ; i<n ; i++) {
+            System.out.println("--------> EMPLOYEE " + (i+1) + " : ");
             //Name
             sc.nextLine();
             System.out.print("Enter Your Full Name : ");
@@ -34,8 +35,7 @@ public class Test {
             String contactNumber = sc.next();
 
             //Address
-            System.out.print("Enter Address (street , city , state , pincode): ");
-
+            System.out.print("Enter Address (street , city , state , pincode) : ");
             String street = sc.next();
             String city = sc.next();
             String state = sc.next();
@@ -65,6 +65,7 @@ public class Test {
     public static void getEmployeesByJobPosition(Employee e[], String jp) {
         for (int i=0 ; i<e.length ; i++) {
             if (e[i].getJobPosition().equals(jp)) {
+                System.out.println("--------> " + " Employee Detail <-------- : ");
                 System.out.println(e[i].getEmployee());
             }
         }
@@ -74,6 +75,7 @@ public class Test {
     public static void getEmployeesByHireDate(Employee e[], Date d1, Date d2) {
         for (int i=0 ; i<e.length ; i++) {
             if(e[i].getHireDate().compareTo(d1.getDate()) >=0 && e[i].getHireDate().compareTo(d2.getDate()) <= 0) {
+                System.out.println("--------> " + " Employee Detail <-------- : ");
                 System.out.println(e[i].getEmployee());
             }
         }
@@ -94,6 +96,7 @@ public class Test {
     public static void getEmployeesBySalary(Employee e[], double s1, double s2) {
         for (int i=0 ; i<e.length ; i++) {
             if (e[i].getSalary() >= s1 && e[i].getSalary() <= s2) {
+                System.out.println("--------> " + " Employee Detail <-------- : ");
                 System.out.println(e[i].getEmployee());
             }
         }
@@ -102,18 +105,35 @@ public class Test {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the Number of Employees : ");
         int n = sc.nextInt();
+        System.out.println();
         // Creating Employee Datebase
+        System.out.println("----> Employee Database Creation Started : ");
+        System.out.println("|");
+        System.out.println("v");
         Employee []e = employeeDatebase(n , sc);
 
         // Arranging Employee Salary
+        System.out.println();
+        System.out.println("|");
+        System.out.println("v");
+        System.out.println("----> Sorting the Employee Database According to Salary in Decresing Order : ");
         arrangeEmployeeBySalary(e);
+        System.out.println("----> Sorting is Done <----");
         
         //Displaying Job positoin
+        System.out.println();
+        System.out.println("----> For Displaying the Detail of Employee (of the Entered Job Position ) : ");
+        System.out.println("|");
+        System.out.println("v");
         System.out.print("Enter Job Position : ");
         String jp = sc.next();
         getEmployeesByJobPosition(e, jp);
 
         //Displaying Hire Date
+        System.out.println();
+        System.out.println("----> For Displaying the Detail of the Employee Between the Following Dates : ");
+        System.out.println("|");
+        System.out.println("v");
         System.out.print("Enter starting Hire Date : ");
         int d1 = sc.nextInt();
         int m1 = sc.nextInt();
@@ -124,13 +144,21 @@ public class Test {
         int m2 = sc.nextInt();
         int y2 = sc.nextInt();
         Date date2 = new Date(d2, m2, y2);
+        System.out.println("|");
+        System.out.println("v");
         getEmployeesByHireDate(e, date1, date2);
 
         //Counting the Number of Foreign Employee
+        System.out.println();
+        System.out.println("----> Display the Foreign Employees : ");
         System.out.println("The Number of Foreign Employees are : " + foreignEmployeeCount(e));
 
 
         // Display Employee Detail whose Salary is in Between s1 and s2
+        System.out.println();
+        System.out.println("----> Displaying the Employee Detail between the range of the following Salary : ");
+        System.out.println("|");
+        System.out.println("v");
         System.out.print("Enter the salary value of S1 : ");
         double s1 = sc.nextDouble();
         System.out.print("Enter the salary value of s2 : ");
