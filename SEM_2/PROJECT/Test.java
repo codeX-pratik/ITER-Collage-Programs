@@ -6,8 +6,9 @@ public class Test {
         Employee []employeeDatebase = new Employee[n];
         for (int i=0 ; i<n ; i++) {
             //Name
-            System.out.print("Enter Name : ");
-            String name = sc.next();
+            sc.nextLine();
+            System.out.print("Enter Your Full Name : ");
+            String name = sc.nextLine();
 
             //Employee Id
             System.out.print("Enter Employee Id : ");
@@ -18,7 +19,7 @@ public class Test {
             double salary = sc.nextDouble();
 
             //Hire Date
-            System.out.println("Enter Hire Date : ");
+            System.out.print("Enter Hire Date : ");
             int day = sc.nextInt();
             int month = sc.nextInt();
             int year = sc.nextInt();
@@ -33,7 +34,8 @@ public class Test {
             String contactNumber = sc.next();
 
             //Address
-            System.out.print("Enter Address : ");
+            System.out.print("Enter Address (street , city , state , pincode): ");
+
             String street = sc.next();
             String city = sc.next();
             String state = sc.next();
