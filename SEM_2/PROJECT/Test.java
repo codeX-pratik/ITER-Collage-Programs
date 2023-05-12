@@ -117,7 +117,7 @@ public class Test {
         int m1 = sc.nextInt();
         int y1 = sc.nextInt();
         Date date1 = new Date(d1, m1, y1);
-        System.out.print("Enter Endign Hire Date : ");
+        System.out.print("Enter Ending Hire Date : ");
         int d2 = sc.nextInt();
         int m2 = sc.nextInt();
         int y2 = sc.nextInt();
