@@ -46,6 +46,9 @@ This Method is used to display the Employee detail between the input salary . s1
 is inputted by the user . The method checks salary in between s1 to s2 and displays the
 Employee Detail .
 
+
+
+
         ----> OUTPUT <----
                 
 Enter the Number of Employees : 10
