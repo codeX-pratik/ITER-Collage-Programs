@@ -1,0 +1,47 @@
+The Project contain code for managing the Employee database . The Package PROJECT contain four java file 
+(Address.java , Date.java , Employee.java , Test.java) . Here the only Test.java file contains the main function .
+
+Address.java file :
+This java file contains the Address class with four instance variables i.e. street , city , state and pin code 
+with the constructor for the initialize the instance variables . Setter Methods and Getter Methods for each of 
+the instance variables . At last a addition getter method for getting the full address all together in String .
+
+Date.java file :
+This java file contains the Date class with three instance variables i.e. day , month and year with the constructor 
+for the initialize the instance variable . Setter Methods and Getter Methods for each of the instance variables . 
+At last a addition getter method for getting the Date in String which include day , month and year (DD-MM-YYYY) .
+
+Employee.java file :
+This java file contains the Employee class with seven instance variables i.e. name , empId , salary , hireDate , 
+jobPositoin , contactNumber and address . The hireDate datatype is “Date” which refers to the Date class and 
+address datatype is “Address” which refers to the Address class . Setter Methods and Getter Methods for each 
+of the instance variables. An additional getter method which returns the Employee’s all Detail in String datatype .
+
+Test.java file :
+The following java file contains the main function . First the program asks the User to “Enter the Number of Employee : ” 
+, accordingly it creates the Employee database using the array employeedatabse[] , in which a method is called 
+“employeedatabse(n ,sc) for input of required detail of the Employee . After the completion of the data entry of 
+the Employee the interpreter return to main function .
+
+arrangeEmployeeBySalary(e);
+This Method is called for sorting the Employee Database with respect to salary in decreasing order . After sorting 
+it prints a message “Sorting is Done” . The Method swaps the object in decreasing order according to the salary .
+
+getEmployeeByJobPosition(e , jp);
+This Method display the Detail of the Employee of the given Job Position . The method compare the job position 
+(jp) to the every Employee’s job position with the help of string method .equal(jp) . if the job position is 
+equal then it return the Employee Detail.
+
+getEmployeeByHireDate(e ,Date1 ,Date2);
+This Method for Displaying the Detail of the Employee between the input Date . The Date1 and Date2 are object . 
+The method compares the Dates in between Date1 to Date2 and Displays the Employee Detail.
+
+foreignEmployeeCount(e);
+This Method counts the number of foreign Employee in Database . The method Checks
+the contact Number if it startswith “+91” and if it does not start , the variable c is
+incremented and returned .
+
+getEmployeeBySalary(e ,s1 ,s2);
+This Method is used to display the Employee detail between the input salary . s1 and s2
+is inputted by the user . The method checks salary in between s1 to s2 and displays the
+Employee Detail .
