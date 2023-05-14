@@ -45,3 +45,154 @@ getEmployeeBySalary(e ,s1 ,s2);
 This Method is used to display the Employee detail between the input salary . s1 and s2
 is inputted by the user . The method checks salary in between s1 to s2 and displays the
 Employee Detail .
+
+
+Enter the Number of Employees : 10
+----> Employee Database Creation Started :
+|
+v
+employeeDatebase[0] = new Employee("java user_1", 2001, 1000, newDate(10, 5 ,2023), "manager", "+91123456", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[1] = new Employee("java user_2", 2002, 2000, newDate(11, 5, 2023), "Software_Developer", "+91987456", newAddress("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[2] = new Employee("java user_3", 2003, 3000, newDate(13, 5, 2023), "Graphic_Designer", "+85258963", newAddress("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[3] = new Employee("java user_4", 2004, 804000, newDate(14, 5, 2023), "manager", "+652789654", new Address("jagamara","Bhubaneswar", "Odisha", 751089));
+employeeDatebase[4] = new Employee("java user_5", 2005, 5000, newDate(15, 5, 2023), "Software_Developer", "+91789654", newAddress("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[5] = new Employee("java user_6", 2006, 6000, newDate(16, 5, 2023), "manager", "+85941256", new Address("jagamara","Bhubaneswar", "Odisha", 751089));
+employeeDatebase[6] = new Employee("java user_7", 2007, 7000, newDate(17, 5, 2023), "Data_Scientist", "+78951236", newAddress("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[7] = new Employee("java user_8", 2008, 8000, newDate(18, 5, 2023), "Software_Developer", "+32456987", newAddress("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[8] = new Employee("java user_9", 2009, 9000, new Date(19, 5, 2023), "manager", "+91852456", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+employeeDatebase[9] = new Employee("java user_10", 2010, 10000, new Date(20, 5, 2023), "Cyber_Security", "+91456852", new Address("jagamara", "Bhubaneswar", "Odisha", 751089));
+
+|
+v
+----> Sorting the Employee Database According to Salary in Decreasing Order :
+----> Sorting is Done <----
+----> For Displaying the Detail of Employee (of the Entered Job Position ) :
+|
+v
+Enter Job Position : manager
+--------> Employee Detail <-------- :
+Name : java user_4
+Employee Id : 2004
+Salary : 804000.0
+Hire Date : 14-5-2023
+Job Position : manager
+Contact Number : +652789654
+Address : jagamara , Bhubaneswar , Odisha , 751089
+--------> Employee Detail <-------- :
+Name : java user_9
+Employee Id : 2009
+Salary : 9000.0
+Hire Date : 19-5-2023
+Job Position : manager
+Contact Number : +91852456
+Address : jagamara , Bhubaneswar , Odisha , 751089
+--------> Employee Detail <-------- :
+Name : java user_6
+Employee Id : 2006
+Salary : 6000.0
+Hire Date : 16-5-2023
+Job Position : manager
+Contact Number : +85941256
+Address : jagamara , Bhubaneswar , Odisha , 751089
+--------> Employee Detail <-------- :
+Name : java user_1
+Employee Id : 2001
+Salary : 1000.0
+Hire Date : 10-5-2023
+Job Position : manager
+Contact Number : +91123456
+Address : jagamara , Bhubaneswar , Odisha , 751089
+----> For Displaying the Detail of the Employee Between the Following Dates :
+|
+v
+Enter starting Hire Date : 13 5 2023
+Enter Ending Hire Date : 18 5 2023
+|
+v
+--------> Employee Detail <-------- :
+Name : java user_4
+Employee Id : 2004
+Salary : 804000.0
+Hire Date : 14-5-2023
+Job Position : manager
+Contact Number : +652789654
+Address : jagamara , Bhubaneswar , Odisha , 751089
+--------> Employee Detail <-------- :
+Name : java user_8
+Employee Id : 2008
+Salary : 8000.0
+Hire Date : 18-5-2023
+Job Position : Software_Developer
+Contact Number : +32456987
+Address : jagamara , Bhubaneswar , Odisha , 751089
+--------> Employee Detail <-------- :
+Name : java user_7
+Employee Id : 2007
+Salary : 7000.0
+Hire Date : 17-5-2023
+Job Position : Data_Scientist
+Contact Number : +78951236
+Address : jagamara , Bhubaneswar , Odisha , 751089
+--------> Employee Detail <-------- :
+Name : java user_6
+Employee Id : 2006
+Salary : 6000.0
+Hire Date : 16-5-2023
+Job Position : manager
+Contact Number : +85941256
+Address : jagamara , Bhubaneswar , Odisha , 751089
+--------> Employee Detail <-------- :
+Name : java user_5
+Employee Id : 2005
+Salary : 5000.0
+Hire Date : 15-5-2023
+Job Position : Software_Developer
+Contact Number : +91789654
+Address : jagamara , Bhubaneswar , Odisha , 751089
+--------> Employee Detail <-------- :
+Name : java user_3
+Employee Id : 2003
+Salary : 3000.0
+Hire Date : 13-5-2023
+Job Position : Graphic_Designer
+Contact Number : +85258963
+Address : jagamara , Bhubaneswar , Odisha , 751089
+----> Display the Foreign Employees :
+The Number of Foreign Employees are : 5
+----> Displaying the Employee Detail between the range of the following Salary :
+|
+v
+Enter the salary value of S1 : 3000
+Enter the salary value of s2 : 7000
+--------> Employee Detail <-------- :
+Name : java user_7
+Employee Id : 2007
+Salary : 7000.0
+Hire Date : 17-5-2023
+Job Position : Data_Scientist
+Contact Number : +78951236
+Address : jagamara , Bhubaneswar , Odisha , 751089
+--------> Employee Detail <-------- :
+Name : java user_6
+Employee Id : 2006
+Salary : 6000.0
+Hire Date : 16-5-2023
+Job Position : manager
+Contact Number : +85941256
+Address : jagamara , Bhubaneswar , Odisha , 751089
+--------> Employee Detail <-------- :
+Name : java user_5
+Employee Id : 2005
+Salary : 5000.0
+Hire Date : 15-5-2023
+Job Position : Software_Developer
+Contact Number : +91789654
+Address : jagamara , Bhubaneswar , Odisha , 751089
+--------> Employee Detail <-------- :
+Name : java user_3
+Employee Id : 2003
+Salary : 3000.0
+Hire Date : 13-5-2023
+Job Position : Graphic_Designer
+Contact Number : +85258963
+Address : jagamara , Bhubaneswar , Odisha , 751089
