@@ -20,3 +20,10 @@ public class P8 {
         }
     }
 }
+
+/*
+
+Enter a Number : 1234
+The reverse of the given number is : 4321
+
+ */

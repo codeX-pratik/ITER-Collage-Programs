@@ -18,3 +18,10 @@ public class P9 {
         }
     }
 }
+
+/*
+
+Enter a Number : 7
+Fibonacci number at position 7 is 13
+
+ */
