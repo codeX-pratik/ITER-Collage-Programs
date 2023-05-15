@@ -36,3 +36,17 @@ public class P6 {
 
     }
 }
+
+/*
+
+----> String object Created : 
+Hello world
+Hello Everyone
+----> Integer object Created : 
+34
+95
+----> Object object Created : 
+Hello world
+45
+
+ */
