@@ -33,3 +33,25 @@ public class P4 {
         printArray(DoubleArray);
     }
 }
+
+/*
+
+Enter the size of the Array : 5
+Enter Array Elements
+1
+2
+3
+4
+5
+Integer Array Contains :
+1  2  3  4  5  
+Enter Array Element
+1.2
+2.3
+3.4
+4.5
+5.6
+Double Array contains :
+1.2  2.3  3.4  4.5  5.6
+
+ */

@@ -27,3 +27,17 @@ public class P5 {
         System.out.println("Number of times " + item + " present in the array is " + (count(E, item)));
     }
 }
+
+/*
+
+Enter the size of the array : 5
+Enter Array Element : 
+1
+2
+3
+4
+5
+Enter the element to search : 4
+Number of times 4 present in the array is 1
+
+ */
