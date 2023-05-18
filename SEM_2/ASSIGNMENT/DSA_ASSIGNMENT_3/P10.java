@@ -19,3 +19,10 @@ public class P10 {
         }
     }
 }
+
+/*
+
+Enter your String : pots&pans
+The Reversed String is snap&stop
+
+ */
