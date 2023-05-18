@@ -8,7 +8,7 @@ public class HW_3 {
         String s = sc.next();
 
         if (isPalindrome(s)) {
-            System.out.println(" Yes , this is a palindrome.");
+            System.out.println("Yes , this is a palindrome.");
         } else {
             System.out.println("No , this is not a palindrome.");
         }
@@ -26,7 +26,17 @@ public class HW_3 {
         if (s.charAt(0) != s.charAt(s.length() - 1)) {
             return false;
         }
-        
+
         return isPalindrome(s.substring(1, s.length() - 1));
     }
 }
+
+/*
+
+Enter your String : racecar
+Yes , this is a palindrome.
+
+Enter your String : gohangasalamiimalasagnahog
+Yes , this is a palindrome.
+
+ */
