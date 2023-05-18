@@ -1,6 +1,14 @@
+import java.util.*;
 public class P10 {
     public static void main(String[] args) {
-        System.out.println(reverseString("pratik"));
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your String : ");
+        String s = sc.next();
+        System.out.print("The Reversed String is ");
+        System.out.println(reverseString(s));
+
+        sc.close();
     }
 
     public static String reverseString(String s) {
