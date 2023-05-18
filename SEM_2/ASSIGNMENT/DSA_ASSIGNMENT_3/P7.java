@@ -51,6 +51,7 @@ public class P7 {
                 System.out.println("Invalid Choice");
                 break;
         }
+        sc.close();
     }
 
     public static int factorial(int n) {
