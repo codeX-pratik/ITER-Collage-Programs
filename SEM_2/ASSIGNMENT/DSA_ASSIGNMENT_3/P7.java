@@ -93,3 +93,17 @@ public class P7 {
         }
     }
 }
+
+/*
+
+----> MENU <----
+1. Determine the factorial of a number
+2. Determine X to power N for two numbers X, N  
+3. Determine GCD of two number
+4. Binary equivalent of a decimal number        
+5. Product of two numbers
+Enter Your Choice : 5
+Enter two Number : 2 5
+The product of 2 and 5 is 10
+
+ */
