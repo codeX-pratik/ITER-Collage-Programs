@@ -18,5 +18,4 @@ public class P10 {
             return reverseString(s.substring(1)) + s.charAt(0);
         }
     }
-
 }
