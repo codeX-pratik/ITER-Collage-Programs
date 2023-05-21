@@ -6,17 +6,18 @@ public class P10 {
         System.out.print("Enter your String : ");
         String s = sc.next();
         System.out.print("The Reversed String is ");
-        System.out.println(reverseString(s));
+        reverseString(s , s.length() - 1);
 
         sc.close();
     }
 
-    public static String reverseString(String s) {
-        if (s.length() <= 1 || s == null) {
-            return s;
-        } else {
-            return reverseString(s.substring(1)) + s.charAt(0);
+    public static void reverseString(String str , int index) {
+        if (index == 0) {
+            System.out.print(str.charAt(index));
+            return;
         }
+        System.out.print(str.charAt(index));
+        reverseString(str, index - 1);
     }
 }
 
