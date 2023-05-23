@@ -10,7 +10,7 @@ public class Student_pkg1 {
         rollNumber = sc.nextInt();
         System.out.print("Enter you Name : ");
         name = sc.next();
-        sc.close();
+        
     }
     public void output_s() {
         System.out.println("Roll Number : " + rollNumber);

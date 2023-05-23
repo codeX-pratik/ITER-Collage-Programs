@@ -9,7 +9,7 @@ public class Test1 extends Student_pkg1{
         m1 = sc.nextDouble();
         System.out.print("Enter Mark-2 : ");
         m2 = sc.nextDouble();
-        sc.close();
+        
     }
     public void output_m() {
         System.out.println("Mark-1 : " + m1);
