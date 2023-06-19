@@ -232,6 +232,49 @@ class LinkedList {
         return start;
     }
 
+    //Searching the student to update the mark according to the resgistration Number
+    public static void search(Node start) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Resistration Number to be searched : ");
+        int regd = sc.nextInt();
+
+        Node currentNode = start;
+        while (currentNode != null) {
+            if (currentNode.regd_no == regd) {
+                System.out.println("---> Student found , With the registration No. : " + currentNode.regd_no);
+                System.out.println("Current Student Mark is : " + currentNode.mark);
+                System.out.println("Enter the new Mark : ");
+                float newMark  = sc.nextFloat();
+                currentNode.mark = newMark;
+                System.out.println("New Mark is Updated !!");
+                return;
+            }
+            currentNode = currentNode.next;
+        }
+        System.out.println("Student Not Found !!");
+    }
+
+    public static void sort(Node start) {
+        if (start == null) {
+            System.out.println("List is Empty ! , Sorting is Not Possible");
+        } else if (start.next == null) {
+            System.out.println("List has only one Node ! , List is already sorted.");
+        }
+
+
+    }
+
+    //To count the Number of Node Present in the List
+    public static int count(Node start) {
+        int count = 0;
+        Node currentNode = start;
+        while (currentNode != null) {
+            count++;
+            currentNode = currentNode.next;
+        }
+        return count;
+    }
+
     //Displaying the list 
     public static void Display(Node start) {
         if (start == null) {
@@ -247,5 +290,4 @@ class LinkedList {
             System.out.println("NULL");
         }
     }
-
 }
