@@ -46,10 +46,16 @@ class LinkedList {
                     break;
                 case 7 : 
                     start = DelByResgNo(start);
+                    break;
                 case 8 : 
-                    Display(start);
+                    search(start);
                     break;
                 case 9 :
+                    start = sort(start);
+                case 12 : 
+                    Display(start);
+                    break;
+                case 13 :
                     System.out.println("Exiting...");
                     System.exit(0);
                     break;
@@ -254,6 +260,7 @@ class LinkedList {
         System.out.println("Student Not Found !!");
     }
 
+    //To sort Node according to the Mark from highest to lowest
     public static void sort(Node start) {
         if (start == null) {
             System.out.println("List is Empty ! , Sorting is Not Possible");
@@ -273,6 +280,10 @@ class LinkedList {
             currentNode = currentNode.next;
         }
         return count;
+    }
+
+    public static void reverse(Node start) {
+
     }
 
     //Displaying the list 
