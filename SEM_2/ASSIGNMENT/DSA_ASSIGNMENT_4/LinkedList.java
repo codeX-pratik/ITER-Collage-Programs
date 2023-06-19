@@ -20,8 +20,12 @@ class LinkedList {
             System.out.println("5. Deletion of the Node the end of the list");
             System.out.println("6. Deletion of the Node from any position of the list");
             System.out.println("7. Deletion of the Node based on the Registration Number");
-            System.out.println("8. To Display the list");
-            System.out.println("9. Exit");
+            System.out.println("8. Search a node based on student regd_no and update the mark of the student");
+            System.out.println("9. Sort the Nodes based of Marked Secured");
+            System.out.println("10. Count the Number of Node present int List");
+            System.out.println("11. Reserve the Linked list");
+            System.out.println("12. To Display the list");
+            System.out.println("13. Exit");
             System.out.print("---> Enter your choice : ");
             int choice = sc.nextInt();
 
@@ -52,6 +56,18 @@ class LinkedList {
                     break;
                 case 9 :
                     start = sort(start);
+                    break;
+                case 10 :
+                    int countNode = count(start);
+                    if (countNode == 0) {
+                        System.out.println("List is Empty!");
+                    } else {
+                        System.out.println("The Number of Node is the List is " + countNode);
+                    }
+                    break;
+                case 11 :
+                    start = reverse(start);
+                    break;
                 case 12 : 
                     Display(start);
                     break;
@@ -261,14 +277,32 @@ class LinkedList {
     }
 
     //To sort Node according to the Mark from highest to lowest
-    public static void sort(Node start) {
+    public static Node sort(Node start) {
         if (start == null) {
             System.out.println("List is Empty ! , Sorting is Not Possible");
+            return start;
         } else if (start.next == null) {
             System.out.println("List has only one Node ! , List is already sorted.");
+            return start;
         }
+        Node currentNode = start;
+        while (currentNode != null) {
+            Node secondNode = currentNode.next;
+            while (secondNode != null) {
+                if (currentNode.mark < secondNode.mark) {
+                    float tempMark = currentNode.mark;
+                    currentNode.mark = secondNode.mark;
+                    secondNode.mark = tempMark;
 
-
+                    int tempRegdNo = currentNode.regd_no;
+                    currentNode.regd_no = secondNode.regd_no;
+                    secondNode.regd_no = tempRegdNo;
+                }
+                secondNode = secondNode.next;
+            }
+            currentNode = currentNode.next;
+        }
+        return start;
     }
 
     //To count the Number of Node Present in the List
@@ -282,8 +316,18 @@ class LinkedList {
         return count;
     }
 
-    public static void reverse(Node start) {
-
+    public static Node reverse(Node start) {
+        Node previousNode = null;
+        Node currentNode = start;
+        Node next = null;
+        while (currentNode != null) {
+            next = currentNode.next;
+            currentNode.next = previousNode;
+            previousNode = currentNode;
+            currentNode = next;
+        }
+        start = previousNode;
+        return start;
     }
 
     //Displaying the list 
