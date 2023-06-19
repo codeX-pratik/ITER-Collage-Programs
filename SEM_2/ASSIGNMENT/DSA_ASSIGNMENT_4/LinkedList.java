@@ -56,6 +56,7 @@ class LinkedList {
                     break;
                 case 9 :
                     start = sort(start);
+                    System.out.println("List is Sorted");
                     break;
                 case 10 :
                     int countNode = count(start);
