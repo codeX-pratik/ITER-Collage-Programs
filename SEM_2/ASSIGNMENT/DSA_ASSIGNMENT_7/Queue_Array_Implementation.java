@@ -5,8 +5,8 @@ public class Queue_Array_Implementation {
     public static int front = -1;
     public static int rear = -1;
     public static int c = 0;
+    public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
         int queue[] = new int[MAX];
 
@@ -38,7 +38,6 @@ public class Queue_Array_Implementation {
     }
 
     public static int data() {
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter your data : ");
         int d = sc.nextInt();
         return d;
