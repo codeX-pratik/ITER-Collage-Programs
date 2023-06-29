@@ -63,10 +63,6 @@ class Stack_Array_Implementation{
             System.out.println("The Stack is Empty !!");
         } else {
             System.out.println("The stack Elements are : ");
-            // System.out.println("Stack elements:");
-			// while(top >= 0)
-			// 	System.out.print(S[top--] + " ");				//Note how we are directly decrementing the top variable. This does not lead to an error, because this top variable is local to this method. Modifying this variable does not lead to the modification of the top variable in the main method.
-			// System.out.println();
             for (int i= top ; i>=0 ; i--) {
                 System.out.print(S[i] + " ");
             }

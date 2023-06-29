@@ -67,6 +67,7 @@ public class Queue_Array_Implementation {
         if(isEmpty()) {
             System.out.println("Queue is Empty !");
         } else {
+            
             System.out.println(Q[0]);
         }
     }
