@@ -2,8 +2,10 @@ import java.util.*;
 
 class Stack_Array_Implementation{
 
+    public static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        
         Object[] s = new Object[MAX];
         int top = -1;
 
@@ -36,7 +38,7 @@ class Stack_Array_Implementation{
     }
 
     public static int push(Object[] S , int top) {
-        Scanner sc = new Scanner(System.in);
+        
         if (isFull(top)) {
             System.out.println("The stack is Full !!");
         } else {
@@ -61,9 +63,14 @@ class Stack_Array_Implementation{
             System.out.println("The Stack is Empty !!");
         } else {
             System.out.println("The stack Elements are : ");
+            // System.out.println("Stack elements:");
+			// while(top >= 0)
+			// 	System.out.print(S[top--] + " ");				//Note how we are directly decrementing the top variable. This does not lead to an error, because this top variable is local to this method. Modifying this variable does not lead to the modification of the top variable in the main method.
+			// System.out.println();
             for (int i= top ; i>=0 ; i--) {
-                System.out.println(S[i]);
+                System.out.print(S[i] + " ");
             }
+            System.out.println();
         }
     }
 }
