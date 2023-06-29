@@ -4,6 +4,7 @@ public class Queue_Array_Implementation {
     public static final int MAX = 5;
     public static int front = -1;
     public static int rear = -1;
+    public static int c = 0;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -44,6 +45,7 @@ public class Queue_Array_Implementation {
     }
 
     public static void intsert(int Q[]) {
+        c++;
         if (isFull()) {
             System.out.println("Queue is Full !");
             return;
@@ -53,6 +55,7 @@ public class Queue_Array_Implementation {
     }
 
     public static void delete(int Q[]) {
+        c--;
         if (isEmpty()) {
             System.out.println("Queue is Empty !");
         }
@@ -67,8 +70,12 @@ public class Queue_Array_Implementation {
         if(isEmpty()) {
             System.out.println("Queue is Empty !");
         } else {
-            
-            System.out.println(Q[0]);
+            System.out.println("|");
+            System.out.println("V");
+            for (int i=0 ; i<c ; i++) {
+                System.out.print(Q[i] + " ");
+            }
+            System.out.println();
         }
     }
 
