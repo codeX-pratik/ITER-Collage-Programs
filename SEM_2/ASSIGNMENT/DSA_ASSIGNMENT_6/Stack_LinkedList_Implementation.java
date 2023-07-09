@@ -37,7 +37,7 @@ public class Stack_LinkedList_Implementation {
 					display(top);
 					break;
 				default:
-					System.out.println("Invalid choice!");
+					System.out.println("Invalid choice!"); break;
 			}
 		}
 	}

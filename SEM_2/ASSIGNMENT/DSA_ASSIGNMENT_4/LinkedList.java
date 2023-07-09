@@ -183,7 +183,7 @@ class LinkedList {
         }
         Node secondLastNode = start;
         Node lastNode = start.next;
-        while (lastNode != null) {
+        while (lastNode.next != null) {
             lastNode = lastNode.next;
             secondLastNode = secondLastNode.next;
         }
