@@ -7,8 +7,10 @@ class Node {
 }
 
 class LinkedList {
+
+    public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    
         Node start = null;
 
         while (true) {
@@ -85,7 +87,7 @@ class LinkedList {
 
     //Creating Nodes
     public static void create(Node start) {
-        Scanner sc = new Scanner(System.in);
+        
         System.out.print("Enter the Registration Number : ");
         start.regd_no = sc.nextInt();
         System.out.print("Enter your Mark : ");
@@ -128,7 +130,7 @@ class LinkedList {
 
     //Inserting Node at any Position
     public static Node InsAny(Node start) {
-        Scanner sc = new Scanner(System.in);
+        
         System.out.print("Enter the position you want to insert the Node : ");
         int position = sc.nextInt();
 
@@ -194,7 +196,7 @@ class LinkedList {
 
     //Deleting Node at any Position
     public static Node DelAny(Node start) {
-        Scanner sc = new Scanner(System.in);
+        
         System.out.print("Enter the position you want to delete the Node : ");
         int position = sc.nextInt();
 
@@ -226,7 +228,7 @@ class LinkedList {
 
     //Deleting Node according to the Registration Number
     public static Node DelByResgNo(Node start) {
-        Scanner sc = new Scanner(System.in);
+        
         System.out.println("Enter the student registration number to be deleted : ");
         int reg = sc.nextInt();
 
@@ -257,7 +259,7 @@ class LinkedList {
 
     //Searching the student to update the mark according to the resgistration Number
     public static void search(Node start) {
-        Scanner sc = new Scanner(System.in);
+        
         System.out.println("Enter the Resistration Number to be searched : ");
         int regd = sc.nextInt();
 
