@@ -45,18 +45,20 @@ public class LinkedList_stack {
     public static <T> Node<T> pop(Node<T> top) {
         if (top == null) {
             System.out.println("Stack is Empty");
-        } 
-        System.out.println(top.data + " is Poped");
-        top = top.next;
+        } else {
+            System.out.println(top.data + " is Poped");
+            top = top.next;
+        }
         return top;
     }
 
     public static <T> void display(Node<T> top) {
         if (top == null) {
             System.out.println("Stack is Empty");
+            return;
         }
-        Node<T> cNode = top;
-        
+        System.out.println("---> " + top.data);
+        Node<T> cNode = top.next;
         while (cNode != null) {
             System.out.println("     " + cNode.data);
             cNode = cNode.next;

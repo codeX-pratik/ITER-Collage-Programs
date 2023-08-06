@@ -48,8 +48,8 @@ public class Array_stack {
             System.out.println("Stack is Empty");
             return;
         }
-        System.out.println("---> " + arr[0]);
-        for (int i=1 ; i<=top ; i++) {
+        System.out.println("---> " + arr[top]);
+        for(int i=top-1 ; i>=0 ; i--) {
             System.out.println("     " + arr[i]);
         }
         System.out.println();
