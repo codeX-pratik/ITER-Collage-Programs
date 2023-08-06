@@ -64,7 +64,7 @@ class Stack_Array_Implementation{
         } else {
             System.out.println("The stack Elements are : ");
             for (int i= top ; i>=0 ; i--) {
-                System.out.print(S[i] + " ");
+                System.out.println(S[i] + " ");
             }
             System.out.println();
         }
