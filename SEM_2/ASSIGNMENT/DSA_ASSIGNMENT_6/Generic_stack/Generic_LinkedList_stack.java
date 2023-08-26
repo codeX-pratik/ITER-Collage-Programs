@@ -9,13 +9,14 @@ class Node<T> {
     }
 }
 
-public class LinkedList_stack {
+public class Generic_LinkedList_stack {
 
     public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         Node<Object> top = null;
 
         while (true) {
+            System.out.println("---> MENU <---");
             System.out.println("0. Exit");
             System.out.println("1. Push");
             System.out.println("2. Pop");
@@ -24,7 +25,7 @@ public class LinkedList_stack {
             int choice = sc.nextInt();
 
             switch(choice) {
-                case 0 : System.exit(0); break;
+                case 0 : System.out.println("Exiting..."); System.exit(0); break;
                 case 1 : top = push(top); break;
                 case 2 : top = pop(top); break;
                 case 3 : display(top); break;
@@ -45,10 +46,9 @@ public class LinkedList_stack {
     public static <T> Node<T> pop(Node<T> top) {
         if (top == null) {
             System.out.println("Stack is Empty");
-        } else {
-            System.out.println(top.data + " is Poped");
-            top = top.next;
-        }
+        } 
+        System.out.println(top.data + " is Poped");
+        top = top.next;
         return top;
     }
 
@@ -57,6 +57,7 @@ public class LinkedList_stack {
             System.out.println("Stack is Empty");
             return;
         }
+        System.out.println("Stack element are : ");
         System.out.println("---> " + top.data);
         Node<T> cNode = top.next;
         while (cNode != null) {
