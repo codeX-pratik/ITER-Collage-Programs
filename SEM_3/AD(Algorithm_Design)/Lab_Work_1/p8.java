@@ -23,7 +23,7 @@ public class p8 {
 }
 
 /*
-
+Example : 
 Enter the nth number of fibonacci series : 6
 The nth number of fibonacci series is 8
 

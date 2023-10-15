@@ -1,6 +1,14 @@
+import java.util.Scanner;
 public class p4 {
+    public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        int arr[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+        System.out.print("Enter the number of element for Array : ");
+        int n = sc.nextInt();
+        int []arr = new int[n];
+        for (int i=0 ; i<arr.length ; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
         int maxSoFar = Integer.MIN_VALUE;
         int maxEnd = 0;
         for (int i=0 ; i<arr.length ; i++) {
@@ -18,6 +26,8 @@ public class p4 {
 
 /*
 
+Example : 
+{-2, -3, 4, -1, -2, 1, 5, -3}
 The max value is 7
 
  */

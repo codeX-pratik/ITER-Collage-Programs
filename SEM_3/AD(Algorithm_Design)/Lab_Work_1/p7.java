@@ -14,7 +14,7 @@ public class p7 {
 }
 
 /*
-
+Example : 
 Enter a number : 3
 The factorial of 3 is 6
 
