@@ -1,4 +1,4 @@
-public class LinkedList {
+public class LL {
     
     private static class Node {
         int val;
@@ -14,7 +14,7 @@ public class LinkedList {
     @SuppressWarnings("unused")
     private int size = 0;
 
-    LinkedList() {
+    LL() {
         head = null;
         size = 0;
     }
@@ -71,7 +71,7 @@ public class LinkedList {
     }
 
     public Node sumTwoList(Node l1, Node l2) {
-        LinkedList list = new LinkedList();
+        LL list = new LL();
         while (l1 != null || l2 != null) {
             int ans = 0;
             if (l1 != null) {
@@ -90,7 +90,7 @@ public class LinkedList {
 
 
     public static void main(String[] args) {
-        LinkedList l1 = new LinkedList();
+        LL l1 = new LL();
         l1.addTail(10);
         l1.addTail(20);
         l1.addTail(30);
@@ -101,7 +101,7 @@ public class LinkedList {
         l1.print();
         System.out.println();
 
-        LinkedList l2 = new LinkedList();
+        LL l2 = new LL();
         l2.addTail(10);
         l2.addTail(20);
         l2.addTail(30);
@@ -124,7 +124,7 @@ public class LinkedList {
         
 
         // sum of two list
-        LinkedList l3 = new LinkedList();
+        LL l3 = new LL();
         l3.head = l3.sumTwoList(l1.head, l2.head);
         System.out.print("List 3 : ");
         l3.print();
