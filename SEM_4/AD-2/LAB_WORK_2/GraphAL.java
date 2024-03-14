@@ -116,14 +116,67 @@ public class GraphAL {
         return countAllPathDFS(g, visited, src, dest);
     }
 
+    static class EdgeComparator implements Comparator<Edge> {
+        public int compare(Edge x, Edge y) {
+            if (x.cost < y.cost) {
+                return -1;
+            } if (x.cost >y.cost) {
+                return 1;
+            } return 0;
+        }
+    }
+
+    public static void dijkstra(GraphAL g, int source) {
+        int []previous = new int[g.count];
+        int []dist = new int[g.count];
+        boolean []visited = new boolean[g.count];
+        for (int i=0 ; i<g.count ; i++) {
+            previous[i] = -1;
+            dist[i] = 999999;
+        }
+
+        dist[source] = 0;
+        previous[source] = -1;
+        EdgeComparator comp = new EdgeComparator();
+        PriorityQueue<Edge> queue = new PriorityQueue<Edge>(100, comp);
+        Edge node = new Edge(source, 0);
+        queue.add(node);
+        while(queue.isEmpty() != true) {
+            node = queue.peek();
+            queue.remove();
+            source = node.dest;
+            visited[source] = true;
+            LinkedList<Edge> adl = g.Adj.get(source);
+            for (Edge adn : adl) {
+                int dest = adn.dest;
+                int alt = adn.cost + dist[source];
+                if (dist[dest] > alt && visited[dest] == false) {
+                    dist[dest] = alt;
+                    previous[dest] = source;
+                    node = new Edge(dest, alt);
+                    queue.add(node);
+                }
+            }
+            int count = g.count;
+            for (int i=0 ; i<count ; i++) {
+                if (dist[i] == Integer.MAX_VALUE) {
+                    System.out.println("\n node is " + i + " prev " + previous[i] + " distance : Unreachable");
+                } else {
+                    System.out.println("node is " + i + " prev " + previous[i] + " distance : " + dist[i]);
+                }
+            }
+        }
+    }
+
     public static void main(String[] args) {
         GraphAL g = new GraphAL(5);
-        g.addDirectedEdge(0, 1, 3);
-        g.addDirectedEdge(0, 4, 2);
+        g.addDirectedEdge(0, 1, 1);
+        g.addDirectedEdge(0, 2, 1);
         g.addDirectedEdge(1, 2, 1);
         g.addDirectedEdge(2, 3, 1);
-        g.addDirectedEdge(4, 1, -2);
-        g.addDirectedEdge(4, 3, 1);
+        g.addDirectedEdge(2, 3, 1);
         g.print();
+
+        dijkstra(g, 0);
     }
 }
