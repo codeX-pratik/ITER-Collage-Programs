@@ -1,6 +1,65 @@
 import java.util.*;
 
-public class GraphAL {
+public class Lab_work_3 {
+    public static void main(String[] args) {
+        System.out.println(power_Recursion(5, 3));
+    }
+
+    // Bubble sorting
+    static int[] bubbleSort(int []arr, int n) {
+        for (int i=0 ; i<n-1 ; i++) {
+            for (int j=0 ; j<n-i-1 ; j++) {
+                if (arr[j] > arr[j+1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+
+    // Linear Search using Iteration Method
+    static int linearSearch_Iteration(int []arr, int k) {
+        for (int i=0 ; i<arr.length ; i++) {
+            if (arr[i] == k) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    // Linear Search using Recursion Method
+    static int linearSearch_Recursion(int []arr, int n, int k) {
+        if (n <= 0) {
+            return -1;
+        }
+        if (arr[n-1] == k) {
+            return n-1;
+        }
+        return linearSearch_Recursion(arr, n-1, k);
+    }
+
+    // x to power n in Iteration
+    static int power_Iteration(int x, int n) {
+        int ans = 1;
+        for (int i=0 ; i<n ; i++) {
+            ans *= x;
+        }
+        return ans;
+    }
+
+    // x to power n in Recursion
+    static int power_Recursion(int x, int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return x * power_Recursion(x, n-1);
+        }
+    }
+}
+
+class GraphAL {
     
     int count;
     private LinkedList<LinkedList<Edge>> Adj;
@@ -45,93 +104,29 @@ public class GraphAL {
     public void print() {
         for (int i=0 ; i<count ; i++) {
             LinkedList<Edge> ad = Adj.get(i);
-            System.out.print("\nVertex " + (i) + " is connected to : ");
+            System.out.print("\nVertex " + (i+1) + " is connected to : ");
             for (Edge adn : ad) {
-                System.out.print("("+ (adn.dest) + ", " + adn.cost + ")");
+                System.out.print("("+ (adn.dest+1) + ", " + adn.cost + ")");
             }
         }
-    }
-
-    // DFS using stack
-    public static boolean dfsStack(GraphAL g, int source, int target) {
-        int count = g.count;
-        boolean []visited = new boolean[count];
-        Stack<Integer> stk = new Stack<Integer>();
-        stk.push(source);
-        visited[source] = true;
-
-        while (stk.isEmpty() == false) {
-            int cur = stk.pop();
-            LinkedList<Edge> adl = g.Adj.get(cur);
-            for (Edge adn : adl) {
-                if (visited[adn.dest] == false) {
-                    visited[adn.dest] = true;
-                    stk.push(adn.dest);
-                }
-            }
-        }
-        return visited[target];
-    }
-
-    // BFS using queue
-    public static boolean bfs(GraphAL g, int source, int target) {
-        int count = g.count;
-        boolean []visited = new boolean[count];
-        LinkedList<Integer> q = new LinkedList<Integer>();
-        q.add(source);
-        visited[source] = true;
-
-        while (q.isEmpty() == false) {
-            int cur = q.remove();
-            LinkedList<Edge> adl = g.Adj.get(cur);
-            for(Edge adn : adl) {
-                if (visited[adn.dest] == false) {
-                    visited[adn.dest] = true;
-                    q.add(adn.dest);
-                }
-            }
-        }
-        return visited[target];
-    }
-
-    public static int countAllPathDFS(GraphAL g, boolean []visited, int source, int dest) {
-        if (source == dest) {
-            return 1;
-        }
-        int count = 0;
-        visited[source] = true;
-        LinkedList<Edge> adl = g.Adj.get(source);
-        for (Edge adn : adl) {
-            if (visited[adn.dest] == false) {
-                count += countAllPathDFS(g, visited, adn.dest, dest);
-            }
-            visited[source] = false;
-        }
-        return count;
-    }
-
-    public static int countAllPath(GraphAL g, int src, int dest) {
-        int count = g.count;
-        boolean []visited = new boolean[count];
-        return countAllPathDFS(g, visited, src, dest);
     }
 
     static class EdgeComparator implements Comparator<Edge> {
         public int compare(Edge x, Edge y) {
             if (x.cost < y.cost) {
                 return -1;
-            } if (x.cost >y.cost) {
+            }
+            if (x.cost > y.cost) {
                 return 1;
-            } return 0;
+            }
+            return 0;
         }
     }
 
-    public static void prims(GraphAL g) {
+    public static void dijkstra(GraphAL g, int source) {
         int []previous = new int[g.count];
         int []dist = new int[g.count];
         boolean []visited = new boolean[g.count];
-        int source = 1;
-
         for (int i=0 ; i<g.count ; i++) {
             previous[i] = -1;
             dist[i] = 999999;
@@ -146,8 +141,8 @@ public class GraphAL {
         while(queue.isEmpty() != true) {
             node = queue.peek();
             queue.remove();
-            visited[source] = true;
             source = node.dest;
+            visited[source] = true;
             LinkedList<Edge> adl = g.Adj.get(source);
             for (Edge adn : adl) {
                 int dest = adn.dest;
@@ -168,17 +163,5 @@ public class GraphAL {
                 }
             }
         }
-    }
-
-    public static void main(String[] args) {
-        GraphAL g = new GraphAL(4);
-        g.addDirectedEdge(0, 1, 1);
-        g.addDirectedEdge(0, 2, 1);
-        g.addDirectedEdge(1, 2, 1);
-        g.addDirectedEdge(2, 3, 1);
-        g.addDirectedEdge(2, 3, 1);
-        g.print();
-
-        prims(g);
     }
 }
