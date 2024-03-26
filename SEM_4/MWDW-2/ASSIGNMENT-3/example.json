@@ -1,0 +1,29 @@
+[{
+  "id": 1,
+  "first_name": "Tom",
+  "last_name": "Cruise",
+  "email": "TomCruise1234@gmail.com",
+  "gender": "Male",
+  "ip_address": "26.58.193.2"
+}, {
+  "id": 2,
+  "first_name": "Giavani",
+  "last_name": "Frediani",
+  "email": "student4321@gmail.com",
+  "gender": "Male",
+  "ip_address": "229.179.4.212"
+}, {
+  "id": 3,
+  "first_name": "Noell",
+  "last_name": "Bea",
+  "email": "student9876@gmail.com",
+  "gender": "Female",
+  "ip_address": "180.66.162.255"
+}, {
+  "id": 4,
+  "first_name": "Tom",
+  "last_name": "Valek",
+  "email": "student6789@gmail.com",
+  "gender": "Male",
+  "ip_address": "67.76.188.26"
+}]
