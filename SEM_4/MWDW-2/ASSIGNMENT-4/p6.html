@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputText" placeholder="Enter your Text">
+    <button onclick="showText()">Add Text</button>
+    <br> <br>
+    <canvas id="c6" width="500px" height="500px" style="border: 1px solid black;"></canvas>
+    <script>
+        /** @type {HTMLCanvasElement} */
+        let canvas = document.getElementById('c6');
+        let ctx = canvas.getContext('2d');
+        function showText() {
+            let text = document.getElementById('inputText').value;
+            ctx.font = "50px Times New Roman";
+            ctx.fillText(text, 150, 250);
+        }
+    </script>
+</body>
+</html>

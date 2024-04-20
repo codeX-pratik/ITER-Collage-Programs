@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #c3 {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="c3" width="500px" height="600px"></canvas>
+    <script>
+        /** @type {HTMLCanvasElement} */
+        let canvas = document.getElementById('c3');
+        let ctx = canvas.getContext('2d');
+
+        ctx.beginPath();
+        ctx.fillStyle = "red";
+        ctx.arc(250, 200, 70, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.fillStyle = "blue";
+        ctx.moveTo(250, 100);
+        ctx.lineTo(130, 150);
+        ctx.lineTo(370, 150);
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.fillStyle = "black";
+        ctx.arc(215, 180, 15, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(285, 180, 15, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(250, 220, 40, 0, Math.PI);
+        ctx.fill();
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(250, 210);
+        ctx.lineTo(250, 195);      
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(250, 270);
+        ctx.lineTo(250, 380);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(150, 320);
+        ctx.lineTo(350, 320)
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(250, 380);
+        ctx.lineTo(150, 480)
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(250,380);
+        ctx.lineTo(350, 480);
+        ctx.stroke();
+        </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="controls">
+        <span>Color <input type="color" value="#ffff00" id="penColor"></span>
+        <span>width <input type="range" min="1" max="20" value="10" id="penWidth"></span>
+        <button class="clear">Clear</button>
+    </div>
+    <canvas id="c4" height="500px" width="500px"></canvas>
+
+    <script>
+        /** @type {HTMLCanvasElement} */
+        window.onload = init;
+        let canvas = document.getElementById('c4');
+        let ctx = canvas.getContext('2d');
+        canvas.style.border = "1px solid black";
+
+        let penColor = document.querySelector("#penColor");
+        let penWidth = document.querySelector("#penWidth");
+        document.querySelector(".clear").addEventListener("click", clearImg);
+        let pos = {
+            x: 0,
+            y: 0,
+        };
+
+        function init() {
+            canvas.addEventListener("mousemove", draw);
+            canvas.addEventListener("mousemove", setPosition);
+            canvas.addEventListener("mouseenter", setPosition);
+        }
+
+        function draw(e) {
+            if (e.buttons !== 1) return;
+            ctx.beginPath();
+            ctx.moveTo(pos.x, pos.y);
+            setPosition(e);
+            ctx.lineTo(pos.x, pos.y);
+            ctx.strokeStyle = penColor.value;
+            ctx.lineWidth = penWidth.value;
+            ctx.lineCap = "round";
+            ctx.stroke();
+        }
+            
+        function setPosition(e) {
+            pos.x = e.pageX;
+            pos.y = e.pageY;
+        }
+
+        function clearImg() {
+            const temp = confirm("clear confirm ?");
+            if (temp) {
+                ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
+            }
+        }
+        
+    </script>
+</body>
+</html>

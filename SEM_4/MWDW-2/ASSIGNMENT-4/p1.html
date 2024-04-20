@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #c1 {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="c1" height="300px" width="300px"></canvas>
+    <script>
+        /** @type {HTMLCanvasElement} */
+        let canvas = document.getElementById('c1');
+        let ctx = canvas.getContext('2d');
+        
+        ctx.beginPath();
+        ctx.rect(50, 30, 200, 100);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.arc(150, 220, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+    </script>
+</body>
+</html>

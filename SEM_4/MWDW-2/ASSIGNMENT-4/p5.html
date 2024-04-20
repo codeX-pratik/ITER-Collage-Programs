@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="c5" height="500px" width="500px" style="border: 1px solid black;"></canvas>
+    <script>
+        /** @type {HTMLCanvasElement} */
+        let canvas = document.getElementById('c5');
+        let ctx = canvas.getContext('2d');
+
+        var x = 15;
+        var y = 200;
+        let radius = 15;
+        let FPS = 60;
+
+        let xSpeed = 5;
+        let ySpeed = 7;
+        ctx.fillStyle = "yellow";
+        
+        function clear() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.stroke();
+        }
+        
+        function update() {
+            x += xSpeed;
+            y += ySpeed;
+
+            if (x + radius >= canvas.width) {
+                x = canvas.width - radius;
+                xSpeed = -xSpeed;
+                ctx.fillStyle = generateColor();
+            } else if (x - radius <= 0) {
+                x = 0 + radius;
+                xSpeed = -xSpeed;
+                ctx.fillStyle = generateColor();
+            }
+
+            if (y + radius >= canvas.height) {
+                y = canvas.height - radius;
+                ySpeed = -ySpeed;
+                ctx.fillStyle = generateColor();
+            } else if (y - radius <= 0) {
+                y = 0 + radius;
+                ySpeed = -ySpeed;
+                ctx.fillStyle = generateColor();
+            }
+        }
+
+        function generateColor() {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            return "#" + randomColor;
+        }
+
+        function animation() {
+            clear();
+            drawBall();
+            update();
+        }
+
+        window.setInterval(animation, 1000 / FPS);
+    </script>
+</body>
+</html>

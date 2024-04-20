@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="myAudio" controls src="./Audio/2023 Recap northernelg edit.mp3"></audio>
+    <div>
+        <a href="./Audio/2023 Recap northernelg edit.mp3"></a>
+        <a href="./Audio/Ace of Base - Happy Nation (Official Music Video).mp3"></a>
+        <a href="./Audio/Akon- Right Now (slowedreverb).mp3"></a>
+        <a href="./Audio/Isabel LaRosa - favorite (english).mp3"></a>
+        <a href="./Audio/Leat'eq - Tokyo  (Official Music Video HD).mp3"></a>
+        <a href="./Audio/Lindsey Stirling - Sleigh Ride (Audio).mp3"></a>
+        <a href="./Audio/Lukas Graham - 7 Years [OFFICIAL LYRIC VIDEO].mp3"></a>
+        <a href="./Audio/Miki Matsubara - Stay With Me HD (Club Mix).mp3"></a>
+        <a href="./Audio/One Direction - Night Changes.mp3"></a>
+        <a href="./Audio/Phao - 2 Phut Hon (KAIZ Remix)  TikTok Vietnamese Music 2020.mp3"></a>
+    </div>
+
+    <button onclick="previousSong()">Previous</button>
+    <button onclick="playSong()">Play</button>
+    <button onclick="pauseSong()">Pause</button>
+    <button onclick="nextSong()">Next</button>
+
+    <script>
+        let totalSong = document.getElementsByTagName("a").length;
+        let audio = document.getElementById("myAudio");
+        var song = 0;
+
+        function playSong() {
+            audio.src = getSong(song);
+            audio.play(); 
+        }
+
+        function pauseSong() {
+            audio.pause();
+        }
+
+        function previousSong() {
+            if (song - 1 < 0) {
+                song = totalSong;
+            } else {
+                song -= 1;
+            }
+            playSong();
+        }
+
+        function nextSong() {
+            if (song + 1 > totalSong) {
+                song = 0;
+            } else {
+                song += 1;
+            }
+            playSong();
+        }
+        
+        function getSong(songNumber) {
+            if (songNumber < totalSong) {
+                return document.getElementsByTagName("a")[songNumber].attributes[0].nodeValue;
+            }
+        }
+
+
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<audio id="myAudio" src="./Audio/2023 Recap northernelg edit.mp3"></audio>
+
+<button onclick="playAudio()" type="button">Play Audio</button>
+<button onclick="pauseAudio()" type="button">Pause Audio</button>
+<input id="volumeControl" type="range" min="0" max="1" step="0.1" onchange="changeVolume()" />
+
+<p id="timeDisplay">0:00</p>
+
+<script>
+var audio = document.getElementById("myAudio");
+var timeDisplay = document.getElementById("timeDisplay");
+
+function playAudio() { 
+  audio.play(); 
+} 
+
+function pauseAudio() { 
+  audio.pause(); 
+}
+
+function changeVolume() {
+  var volumeControl = document.getElementById("volumeControl");
+  audio.volume = volumeControl.value;
+}
+
+audio.ontimeupdate = function() {
+  var minutes = Math.floor(audio.currentTime / 60);
+  var seconds = Math.floor(audio.currentTime - minutes * 60);
+  timeDisplay.textContent = minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+};
+</script>
+
+</body>
+</html> -->
