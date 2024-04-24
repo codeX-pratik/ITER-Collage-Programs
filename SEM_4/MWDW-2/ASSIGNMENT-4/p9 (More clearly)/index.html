@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div>
+            <img class="image" src="./image.jpeg" style="border-radius: 1.5rem;" alt="music img">
+        </div>
+
+        <div class="musicPlayContainer">
+            <div class="musicName">
+                <p id="musicName"></p>
+            </div>
+
+            <div class="progress-bar" id="progressBar">
+                <div class="progressed" id="progressed"></div>
+                <span id="currentTime">00:00</span> <span id="duration">00:00</span>
+            </div> <br>
+            
+            <audio id="mySong" src="../Audio/2023 Recap northernelg edit.mp3"></audio> <br>
+
+            <div class="musicButtons maintain-size">
+                <i id="playPrevious" class="fa-solid fa-angle-left music-button-size"></i>
+                <i id="play_pause" class="fa-solid fa-play music-button-size"></i>
+                <i id="playNext" class="fa-solid fa-angle-right music-button-size"></i>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="./List_of_music.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

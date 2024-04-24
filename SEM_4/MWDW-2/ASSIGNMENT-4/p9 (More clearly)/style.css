@@ -1,0 +1,88 @@
+* {
+    margin: 5px;
+}
+
+body {
+    background-color: #48c784;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #488bc7;
+    width: 320px;
+    border-radius: 2rem;
+    border: 2px solid white;
+    box-shadow: 10px 10px  100px #488bc7;
+}
+
+.image {
+    height: 180px;
+    width: 280px;
+    margin: 15px 15px 15px 15px;
+}
+
+.musicPlayContainer {
+    background-color: white;
+    margin: 0px 20px 0px 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 1.5rem;
+}
+
+.musicName {
+    display: block;
+    justify-content: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    font-style: italic;
+    overflow-wrap: break-word;
+}
+
+.musicButtons {
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.progress-bar {
+    height: 5px;
+    width: 250px;
+    background-color: rgb(156, 162, 162);
+    margin-top: 20px;
+}
+
+.progressed {
+    height: 5px;
+    background-color: red;
+    width: 0%;
+    margin: 0px;
+    position: relative;
+}
+
+.progressed:after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: -2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: red;
+}
+
+.music-button-size {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.music-button-size:hover {
+    background-color: rgb(189, 188, 188);
+    border-radius: 1.5rem;
+}
+
+#duration {
+    float: right;
+}
