@@ -53,18 +53,18 @@ function playAndPause() {
     }
 }
 
-// Pause Button
-function pauseButton() {
-    let playPause = document.getElementById("play_pause").classList;
-    playPause.remove("fa-play");
-    playPause.add("fa-pause");
-}
-
 // Play Button
 function playButton() {
     let playPause = document.getElementById("play_pause").classList;
     playPause.remove("fa-pause");
     playPause.add("fa-play");
+}
+
+// Pause Button
+function pauseButton() {
+    let playPause = document.getElementById("play_pause").classList;
+    playPause.remove("fa-play");
+    playPause.add("fa-pause");
 }
 
 // Previous Song Button function
