@@ -24,6 +24,9 @@ function time() {
     music.ontimeupdate = (e) => {
         document.getElementById("currentTime").innerHTML = getTime(music.currentTime);
         progressed.style.width = Math.floor(music.currentTime * 100 / music.duration) + "%";
+        if (music.currentTime == music.duration) {
+            nextSong();
+        }
     };
 
     progressBar.onclick = (e) => {
@@ -64,21 +67,8 @@ function playButton() {
     playPause.add("fa-play");
 }
 
-// Next song Button function
-function nextSong() {
-    currentSong--;
-    if (currentSong < 0) {
-        currentSong = musicList.length - 1;
-    }
-    music.src = `../Audio/${musicList[currentSong]}.mp3`;
-    musicName.innerText = `${musicList[currentSong]}`;
-    pauseButton();
-    time();
-    music.play();
-}
-
 // Previous Song Button function
-function previousSong() {
+function nextSong() {
     currentSong++;
     if (currentSong >= musicList.length) {
         currentSong = 0;
@@ -90,7 +80,20 @@ function previousSong() {
     music.play();
 }
 
+// Next song Button function
+function previousSong() {
+    currentSong--;
+    if (currentSong < 0) {
+        currentSong = musicList.length - 1;
+    }
+    music.src = `../Audio/${musicList[currentSong]}.mp3`;
+    musicName.innerText = `${musicList[currentSong]}`;
+    pauseButton();
+    time();
+    music.play();
+}
+
 // Events
 document.getElementById("play_pause").addEventListener("click", playAndPause);
-document.getElementById("playNext").addEventListener("click", previousSong);
-document.getElementById("playPrevious").addEventListener("click", nextSong);
+document.getElementById("playNext").addEventListener("click", nextSong);
+document.getElementById("playPrevious").addEventListener("click", previousSong);
