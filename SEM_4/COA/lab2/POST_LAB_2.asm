@@ -1,0 +1,14 @@
+MOV AX,001DH
+MOV BX,04H
+
+L1: CMP AX,BX
+    JB L2
+    
+    SUB AX,BX
+    INC CX
+    JMP L1
+    
+L2: MOV [2000H],CX
+    MOV [2002H],AX
+    
+HLT
