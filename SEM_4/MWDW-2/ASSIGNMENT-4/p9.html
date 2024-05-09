@@ -40,19 +40,17 @@
         }
 
         function previousSong() {
-            if (song - 1 < 0) {
-                song = totalSong;
-            } else {
-                song -= 1;
+            song--;
+            if (song < 0) {
+                song = totalSong - 1;
             }
             playSong();
         }
 
         function nextSong() {
-            if (song + 1 > totalSong) {
+            song++;
+            if (song >= totalSong) {
                 song = 0;
-            } else {
-                song += 1;
             }
             playSong();
         }
