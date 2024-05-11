@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gradient-box {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(0deg, red, yellow);
+            text-align: center;
+            line-height: 300px;
+            color: white;
+            font-size: 2em;
+            transition: background 0.5s;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-box">
+        Hover me!
+    </div>
+
+    <script>
+        window.addEventListener('mousemove', e => {
+            const box = document.querySelector('.gradient-box');
+            const x = e.pageX - box.offsetLeft;
+            const y = e.pageY - box.offsetTop;
+            const deg = Math.atan2(y - 150, x - 150) * 180 / Math.PI;
+            box.style.background = `linear-gradient(${deg}deg, red, yellow)`;
+        });
+    </script>
+</body>
+</html>

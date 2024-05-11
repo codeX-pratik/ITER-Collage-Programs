@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .chess-board {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            width: 240px;
+            height: 240px;
+        }
+        .chess-board div {
+            border: 1px solid #999;
+            width: 30px;
+            height: 30px;
+        }
+        .chess-board .white {
+            background: #fff;
+        }
+        .chess-board .black {
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="chess-board">
+        <script>
+            for (let i = 0; i < 8; i++) {
+                for (let j = 0; j < 8; j++) {
+                    if ((i + j) % 2 === 0) {
+                        document.write('<div class="white"></div>');
+                    } else {
+                        document.write('<div class="black"></div>');
+                    }
+                }
+            }
+        </script>
+    </div>
+
+    <script>
+        
+    </script>
+    
+</body>
+</html>

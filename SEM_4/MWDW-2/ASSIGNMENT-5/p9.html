@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+
+<div id="calculator">
+    <input id="display" type="text" readonly>
+    <br>
+    <button class="button" onclick="appendNumber('1')">1</button>
+    <button class="button" onclick="appendNumber('2')">2</button>
+    <button class="button" onclick="appendNumber('3')">3</button>
+    <button class="button" onclick="setOperator('+')">+</button>
+    <br>
+    <button class="button" onclick="appendNumber('4')">4</button>
+    <button class="button" onclick="appendNumber('5')">5</button>
+    <button class="button" onclick="appendNumber('6')">6</button>
+    <button class="button" onclick="setOperator('-')">-</button>
+    <br>
+    <button class="button" onclick="appendNumber('7')">7</button>
+    <button class="button" onclick="appendNumber('8')">8</button>
+    <button class="button" onclick="appendNumber('9')">9</button>
+    <button class="button" onclick="setOperator('*')">*</button>
+    <br>
+    <button class="button" onclick="appendNumber('0')">0</button>
+    <button class="button" onclick="clearDisplay()">C</button>
+    <button class="button" onclick="calculateResult()">=</button>
+    <button class="button" onclick="setOperator('/')">/</button>
+</div>
+
+<script>
+    let operator = null;
+    let operand1 = 0;
+    let operand2 = null;
+
+    function appendNumber(number) {
+        const display = document.getElementById('display');
+        display.value = display.value + number;
+    }
+
+    function setOperator(op) {
+        const display = document.getElementById('display');
+        operator = op;
+        operand1 = parseFloat(display.value);
+        display.value = '';
+    }
+
+    function clearDisplay() {
+        const display = document.getElementById('display');
+        display.value = '';
+    }
+
+    function calculateResult() {
+        const display = document.getElementById('display');
+        operand2 = parseFloat(display.value);
+        let result = 0;
+        switch (operator) {
+            case '+':
+                result = operand1 + operand2;
+                break;
+            case '-':
+                result = operand1 - operand2;
+                break;
+            case '*':
+                result = operand1 * operand2;
+                break;
+            case '/':
+                result = operand1 / operand2;
+                break;
+        }
+        display.value = result;
+    }
+</script>
+</body>
+</html>
