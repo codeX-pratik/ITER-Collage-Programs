@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <table id="table">
+        <tr><td>Row 1</td></tr>
+        <tr><td>Row 2</td></tr>
+        <tr><td>Row 3</td></tr>
+        <tr><td>Row 4</td></tr>
+        <tr><td>Row 5</td></tr>
+    </table>
+    <script>
+        $(document).ready(function(){
+            $("#table tr:even").css("background-color", "#cccccc");
+            $("#table tr:odd").css("background-color", "#fcfcfc");
+        });
+    </script>
+</body>
+</html>

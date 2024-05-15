@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="500px" height="500px" style="border: 1px solid black;"></canvas>
+    <script>
+        $(document).ready(() => {
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            var painting = false;
+
+            function startDraw(e) {
+                painting = true;
+                draw(e);
+            }
+
+            function endDraw() {
+                painting = false;
+                ctx.beginPath();
+            }
+
+            function draw(e) {
+                if (!painting) return;
+                ctx.lineWidth = 10;
+                ctx.lincap = "round";
+                ctx.strokeStyle = "black";
+                ctx.lineTo(e.clientX, e.clientY);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(e.clientX, e.clientY);
+            }
+
+            canvas.addEventListener("mousedown", startDraw);
+            canvas.addEventListener("mouseup", endDraw);
+            canvas.addEventListener("mousemove", draw);
+        });
+    </script>
+</body>
+</html>

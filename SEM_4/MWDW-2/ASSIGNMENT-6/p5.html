@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">This is h1 heading.</h1>
+    <h2 id="h2">This is h2 heading.</h2>
+    <h3 id="h3">This is h3 heading.</h3>
+    <h4 id="h4">This is h4 heading.</h4>
+    <h5 id="h5">This is h5 heading.</h5>
+    <script>
+        $(document).ready(function(){
+            $("h1, h2, h3, h4, h5, h6").click(() => {
+                $("h1, h2, h3, h4, h5, h6").hide();
+            });
+        });
+    </script>
+</body>
+</html>

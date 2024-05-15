@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="selected">
+        <p>Red</p>
+        <p>Orange</p>
+        <p>Yellow</p>
+        <p>Green</p>
+        <p>Blue</p>
+        <p>Indigo</p>
+        <p>Violet</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+            var count = $("#selected").children("p").length;
+            alert("Number of 'p' elements: " + count);
+        });
+    </script>
+</body>
+</html>
