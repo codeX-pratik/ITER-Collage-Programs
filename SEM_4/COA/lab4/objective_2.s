@@ -14,6 +14,6 @@ _start:
 	str r4,[r0],#4
 	
 	mul r5,r1,r2
-	str r5,[r0],#4
+	str r5,[r0]
 	
 my_exit: b my_exit
