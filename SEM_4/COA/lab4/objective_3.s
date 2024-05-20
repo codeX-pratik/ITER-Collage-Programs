@@ -14,7 +14,7 @@ _start:
 	str r4,[r0],#4
 	
 	eor r5,r1,r2
-	str r5,[r0]
+	str r5,[r0],#4
 	
 	mvn r6,r1
 	str r6,[r0]
