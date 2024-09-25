@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const constants = [2.72, 3.14, 9.81, 37, 100];
+    const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway'];
+
+    const rectangle = {
+        width: 20,
+        height: 10,
+        area: 200,
+        perimeter: 60
+    };
+
+    const users = [{
+        name:'Brook',
+        scores:75,
+        skills:['HTM', 'CSS', 'JS'],
+        age:16
+    }, {
+        name:'Alex',
+        scores:80,
+        skills:['HTM', 'CSS', 'JS'],
+        age:18
+    }, {
+        name:'David',
+        scores:75,
+        skills:['HTM', 'CSS'],
+        age:22
+    }, {
+        name:'John',
+        scores:85,
+        skills:['HTML'],
+        age:25
+    }, { 
+        name:'Sara',
+        scores:95,
+        skills:['HTM', 'CSS', 'JS'],
+        age: 26
+    }, {
+        name:'Martha',
+        scores:80,
+        skills:['HTM', 'CSS', 'JS'],
+        age:18
+    }, {
+        name:'Thomas',
+        scores:90,
+        skills:['HTM', 'CSS', 'JS'],
+        age:20
+    }];
+
+
+    // 10.1
+    let [e, pi, gravity, humanBodyTemp, waterBoilingTemp] = constants;
+
+    // 10.2
+    let [fin, est, sw, den, nor] = countries;
+
+    // 10.3
+    let {width, height, area, perimeter} = rectangle;
+
+
+    // 10.4
+    users.forEach(({name, scores, skills, age}) => {
+        console.log(`Name: ${name}, Scores: ${scores}, Skills: ${skills}, Age: ${age}`);
+    })
+
+
+    // 10.5
+    users.forEach(({name, skills}) => {
+        if (skills.length < 2) {
+            console.log(`Name: ${name}, Skills: ${skills}`);
+        }
+    })
+
+
+    // 10.6
+    const countriesInfo = [
+        { name: 'Finland', capital: 'Helsinki', population: 5501043, languages: ['Finnish', 'Swedish'] },
+        { name: 'Estonia', capital: 'Tallinn', population: 1328976, languages: ['Estonian'] },
+        { name: 'Sweden', capital: 'Stockholm', population: 10327589, languages: ['Swedish'] },
+        { name: 'Denmark', capital: 'Copenhagen', population: 5814461, languages: ['Danish'] },
+        { name: 'Norway', capital: 'Oslo', population: 5379475, languages: ['Norwegian'] }
+    ];
+    countriesInfo.forEach(({name, capital, population, languages}) => {
+        console.log(`Country: ${name}, Capital:${capital}, Population: ${population}, Language: ${languages}`);
+    })
+
+
+    // 10.7
+    const student = ['John', ['HTML', 'CSS', 'JS', 'React'], [85, 90, 95, 80]];
+    const [name, skills, [ , , jsScore, reactScore]] = student;
+
+
+    // 10.8
+    function convertArrayToObject(arr) {
+        return arr.map(([name, skills, scores]) => ({ 
+            name, skills, scores
+        }));
+    }
+
+    const students = [
+        ['John', ['HTML', 'CSS', 'JS', 'React'], [85, 90, 95, 80]],
+        ['Sara', ['HTML', 'CSS', 'JS'], [90, 95, 80]],
+        ['David', ['HTML', 'CSS'], [75, 85]]
+    ];
+    console.log(convertArrayToObject(students));
+
+</script>
+</html>

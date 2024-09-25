@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 9.1
+    function sumArgument(...args) {
+        let sum = 0;
+        for (let arg of args) sum += arg;
+        return sum;
+    }
+    console.log("The sum:", sumArgument(1,2,3,4,5,6,7,8,9));
+
+    // 9.2
+    function addNumberOnly(...args) {
+        let sum = 0;
+        for (let x of args) {
+            if (typeof x === 'number') {
+                sum += x;
+            }
+        }
+        return sum;
+    }
+    console.log("The sum (accept only number):", addNumberOnly(5, 10, '15', 'test', 20));
+
+    // 9.3
+    function combineTwoArrays(arr1, arr2) {
+        return [...arr1, ...arr2];
+    }
+    console.log("The combined Array:", combineTwoArrays([1,2,3,4,5], [6,7,8,9,10]).toString());
+
+    // 9.4
+    function sumEveryOther(...args) {
+        let sum = 0;
+        for (let i=0; i<args.length; i += 2) {
+            sum += args[i];
+        }
+        return sum;
+    }
+    console.log("The sum of every other arguments:", sumEveryOther(1, 2, 3, 4, 5));
+
+    // 9.5
+    function onlyUniques(...args) {
+        return [...new Set(args)];
+    }
+    console.log("The unique values:", onlyUniques(1,2,3,4,12,1,4).toString());
+
+    // 9.6
+    function combineAllArrays(...args) {
+        let newArray = [];
+        for (let x of args) {
+            newArray = [...newArray, ...x];
+        }
+        return newArray;
+    }
+    console.log("Combination of multiple arrays:", combineAllArrays([1,2,3],[4,5,6],[7,8,9,10]).toString());
+
+    // 9.7
+
+    function squareAndSum(...args) {
+        let sum = 0;
+        for(let x of args) {
+            if (typeof x === "number") sum += Math.pow(x,2);
+        }
+        return sum;
+    }
+    console.log("The square and sum of the number: ", squareAndSum(1,2,3,4));
+</script>
+</html>
+
+<!-- 
+
+Output:
+The sum: 45
+The sum (accept only number): 35
+The combined Array: 1,2,3,4,5,6,7,8,9,10
+The sum of every other arguments: 9
+The unique values: 1,2,3,4,12
+Combination of multiple arrays: 1,2,3,4,5,6,7,8,9,10
+The square and sum of the number:  30 
+
+-->

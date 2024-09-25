@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const props = [
+        {id: 1, name: "Raj"},
+        {id: 2, name: "Richa"},
+        {id: 3, name: "Radha"}
+    ];
+
+    for (let i=0; i<props.length; i++) {
+        let {id, name: firstName} = props[i];
+        console.log(`Id: ${id}, Name: ${firstName}`);
+    }
+</script>
+</html>
+
+
+<!-- 
+
+Output: 
+Id: 1, Name: Raj
+Id: 2, Name: Richa
+Id: 3, Name: Radha 
+
+-->

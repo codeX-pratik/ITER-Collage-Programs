@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const moreStudent = [
+        'Chris',
+        ['Ahmad', 'Antigoni'],
+        ['Toby', 'Sam']
+    ];
+
+let [stdName, [stdFName1, stdLName1], [stdFName2, stdLName2]] = moreStudent;
+console.log(`Student 1: ${stdName}\nStudent 2: ${stdFName1} ${stdLName1}\nStudent 3: ${stdFName2} ${stdLName2}`);
+</script>
+</html>
+
+
+<!-- 
+
+Output: 
+Student 1: Chris
+Student 2: Ahmad Antigoni
+Student 3: Toby Sam 
+
+-->
