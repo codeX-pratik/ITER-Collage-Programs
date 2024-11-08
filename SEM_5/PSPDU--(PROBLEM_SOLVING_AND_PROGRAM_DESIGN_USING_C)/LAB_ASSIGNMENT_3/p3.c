@@ -1,57 +1,64 @@
 #include <stdio.h>
-
 #define NUM_BRANDS 4
 
-void getStartingInventory(int inventory[]);
-void processTransactions(int inventory[]);
-void displayFinalInventory(const int inventory[]);
-
 int main() {
-    int inventory[NUM_BRANDS] = {0};
-
-    getStartingInventory(inventory);
-    processTransactions(inventory);
-    displayFinalInventory(inventory);
-
-    return 0;
-}
-
-void getStartingInventory(int inventory[]) {
+    int inventory[NUM_BRANDS];
+    int brand_Id, amount;
+    char check;
     printf("Enter the starting case inventory for each brand (Piels, Coors, Bud, Iron City):\n");
     for (int i = 0; i < NUM_BRANDS; i++) {
         printf("Brand %d: ", i + 1);
         scanf("%d", &inventory[i]);
     }
-}
 
-void processTransactions(int inventory[]) {
-    int brandID, amount;
+    do {
+        printf("Enter transation (Brand ID and amount) : ");
+        scanf("%d %d", &brand_Id, &amount);
 
-    printf("\nEnter transactions (brand ID and amount). Enter -1 to stop:\n");
-    while (1) {
-        printf("Brand ID: ");
-        scanf("%d", &brandID);
-
-        if (brandID == -1) {
-            break;
+        if(brand_Id < 1 || brand_Id > NUM_BRANDS) {
+            printf("Invalid Brand ID");
+            continue;
         }
 
-        printf("Amount: ");
-        scanf("%d", &amount);
-
-        if (brandID >= 1 && brandID <= NUM_BRANDS) {
-            inventory[brandID - 1] += amount; 
-        } else {
-            printf("Invalid brand ID. Please enter a number between 1 and 4.\n");
+        switch(brand_Id) {
+            case 1 : inventory[0] += amount; break;
+            case 2 : inventory[1] += amount; break;
+            case 3 : inventory[2] += amount; break;
+            case 4 : inventory[3] += amount; break;
+            default : printf("Invalid Brand Id\n"); break;
         }
-    }
-}
 
-void displayFinalInventory(const int inventory[]) {
-    const char *brands[] = {"Piels", "Coors", "Bud", "Iron City"};
-    
+        printf("do you want to enter another transaction ? (y/n) : ");
+        scanf(" %c", &check);
+    } while (check == 'y');
+
     printf("\nFinal inventory for each brand:\n");
     for (int i = 0; i < NUM_BRANDS; i++) {
-        printf("%s: %d cases\n", brands[i], inventory[i]);
+        printf("Brand %d: %d cases\n", i+1, inventory[i]);
     }
+    return 0;
 }
+
+/*
+
+Enter the starting case inventory for each brand (Piels, Coors, Bud, Iron City):
+Brand 1: 8
+Brand 2: 5
+Brand 3: 2
+Brand 4: 3
+Enter transation (Brand ID and amount) : 1 -3
+do you want to enter another transaction ? (y/n) : y     
+Enter transation (Brand ID and amount) : 2 3 
+do you want to enter another transaction ? (y/n) : y     
+Enter transation (Brand ID and amount) : 3 3
+do you want to enter another transaction ? (y/n) : y     
+Enter transation (Brand ID and amount) : 4 2
+do you want to enter another transaction ? (y/n) : n     
+
+Final inventory for each brand:
+Brand 1: 5 cases
+Brand 2: 8 cases
+Brand 3: 5 cases
+Brand 4: 5 cases
+
+*/

@@ -2,25 +2,25 @@
 #include <math.h>
 
 int main() {
-    int N;
+
     float sum = 0, sum_square = 0, num, smallest, largest, average, range, stddev;
-
-    printf("Enter the number of values : ");
-    scanf("%d", &N);
-
-    if (N < 0) {
-        printf("The number of valus must be greater than 0.\n");
-        return 1;
-    }
-
     printf("Enter the 1 value : ");
     scanf("%f", &num);
     smallest = largest = num;
     sum = num;
     sum_square = pow(num, 2);
 
-    for(int i=2; i<=N; i++) {
-        printf("Enter the %d value : ", i);
+    int N = 1;
+    char check;
+    while(1) {
+        printf("do you want add more numbers (y/n) : ");
+        scanf(" %c", &check);
+
+        if(check != 'y') {
+            break;
+        }
+
+        printf("Enter the %d value : ", ++N);
         scanf("%f", &num);
         sum += num;
         sum_square += pow(num, 2);
@@ -31,7 +31,7 @@ int main() {
 
         if (num > largest) {
             largest = num;
-        }
+        }   
     }
 
     average = sum / N;
@@ -49,12 +49,16 @@ int main() {
 /*
 
 ------> Output:
-Enter the number of values : 5
 Enter the 1 value : 8
-Enter the 2 value : 1
+do you want add more numbers (y/n) : y
+Enter the 2 value : 1 
+do you want add more numbers (y/n) : y
 Enter the 3 value : 3
+do you want add more numbers (y/n) : y
 Enter the 4 value : 5
+do you want add more numbers (y/n) : y
 Enter the 5 value : 7
+do you want add more numbers (y/n) : n
 Smallest number : 1.00
 Largest number : 8.00
 Average : 4.80
