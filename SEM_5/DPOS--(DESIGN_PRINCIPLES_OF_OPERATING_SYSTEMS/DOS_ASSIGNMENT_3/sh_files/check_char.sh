@@ -1,0 +1,13 @@
+echo "Enter a character : "
+read c
+if [ ${#c} -gt 1 ]; then
+	echo "You have entered more than one character"
+elif [[ "$c" =~ [a-z] ]]; then
+	echo "You entered a lower case alphabet"
+elif [[ "$c" =~ [A-Z] ]]; then
+	echo "You entered a upper case alphabet"
+elif [[ "$c" =~ [0-9] ]]; then
+	echo "You entered a digit"
+else 
+	echo "You have a special symbol"
+fi

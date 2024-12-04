@@ -1,0 +1,14 @@
+echo "Enter a day of the week : "
+read day
+case $day in
+	monday)
+		echo "DOS class time 10:00 AM - 11:00 AM, Room: 111" ;;
+	tuesday)
+		echo "DOS class time 5:00 PM - 6:00 PM, Room: 111" ;;
+	wednesday)
+		echo "DOS class time 3:00 PM - 4:00 PM, Room: 111" ;;
+	thursday)
+		echo "DOS class time 11:00 PM - 1:00 PM, Room: 230" ;;
+	*)
+		echo "No class on $day" ;;
+esac

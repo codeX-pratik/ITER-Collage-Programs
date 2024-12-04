@@ -1,0 +1,18 @@
+cat > a.txt 
+    3
+    5
+    1
+
+cat > b.txt
+    2
+    8
+    4
+
+cat > c.txt
+    9
+    0
+    15
+
+cat > prog.sh
+    cat a.txt b.txt c.txt | sort -n > result
+    cat result
