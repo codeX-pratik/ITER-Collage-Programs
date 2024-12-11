@@ -19,6 +19,8 @@ int main() {
 
 /*
 
+output : Child: 6 Parent: 6
+
 pid_t pid;: Declare a variable to store the process ID.
 int i = 5;: Initialize an integer variable i with the value 5.
 pid = vfork();: Create a new process using vfork(). Unlike fork(), vfork() creates a child process 
